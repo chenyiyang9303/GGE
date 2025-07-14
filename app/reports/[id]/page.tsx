@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowLeft, Calendar, Clock, Download, FileText, User, Eye, Share2, BookOpen, Target, Database, Users, Star } from "lucide-react";
 import { getReportById, getAllReports, getRelatedReports, reportCategories } from "@/lib/reports-data";
 import { ReportCover } from "@/components/report-cover-designs";
+import { RelatedReportCard } from "@/components/report-card";
 
 interface ReportPageProps {
   params: {
@@ -313,31 +314,7 @@ export default function ReportDetailPage({ params }: ReportPageProps) {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {relatedReports.map((relatedReport) => (
-                <div key={relatedReport.id} className="bg-white dark:bg-neutral-900 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
-                  <div className="relative h-48">
-                    <Image
-                      src={relatedReport.coverImage}
-                      alt={relatedReport.title}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="font-bold text-neutral-800 dark:text-neutral-100 mb-2">
-                      {relatedReport.title}
-                    </h3>
-                    <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-4 line-clamp-2">
-                      {relatedReport.excerpt}
-                    </p>
-                    <Link
-                      href={`/reports/${relatedReport.id}`}
-                      className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-medium text-sm hover:gap-3 transition-all duration-200"
-                    >
-                      View Report
-                      <Download className="h-4 w-4" />
-                    </Link>
-                  </div>
-                </div>
+                <RelatedReportCard key={relatedReport.id} report={relatedReport} />
               ))}
             </div>
           </div>

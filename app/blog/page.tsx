@@ -95,6 +95,7 @@ export default function BlogPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
+                  className="h-full"
                 >
                   <FeaturedPostCard post={post} />
                 </motion.div>
@@ -124,6 +125,7 @@ export default function BlogPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.05 }}
+                className="h-full"
               >
                 <BlogPostCard post={post} />
               </motion.div>
@@ -173,9 +175,9 @@ export default function BlogPage() {
 
 function FeaturedPostCard({ post }: { post: BlogPost }) {
   return (
-    <div className="group bg-white dark:bg-neutral-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
-      <div className="flex flex-col lg:flex-row">
-        <div className="lg:w-1/2 relative h-64 lg:h-auto">
+    <div className="group bg-white dark:bg-neutral-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 h-full">
+      <div className="flex flex-col lg:flex-row h-full">
+        <div className="lg:w-1/2 relative h-48 lg:h-64">
           <Image
             src={post.coverImage}
             alt={post.title}
@@ -193,39 +195,43 @@ function FeaturedPostCard({ post }: { post: BlogPost }) {
           </div>
         </div>
         
-        <div className="lg:w-1/2 p-6 lg:p-8">
-          <h3 className="text-xl font-bold text-neutral-800 dark:text-neutral-100 mb-3 group-hover:text-blue-600 transition-colors">
-            <Link href={`/blog/${post.slug}`}>
-              {post.title}
-            </Link>
-          </h3>
-          
-          <p className="text-neutral-600 dark:text-neutral-400 mb-4 line-clamp-3">
-            {post.excerpt}
-          </p>
-          
-          <div className="flex items-center gap-4 text-xs text-neutral-500 dark:text-neutral-500 mb-4">
-            <div className="flex items-center gap-1">
-              <User className="h-3 w-3" />
-              {post.author.name}
-            </div>
-            <div className="flex items-center gap-1">
-              <Calendar className="h-3 w-3" />
-              {new Date(post.publishDate).toLocaleDateString()}
-            </div>
-            <div className="flex items-center gap-1">
-              <Clock className="h-3 w-3" />
-              {post.readTime}
-            </div>
+        <div className="lg:w-1/2 p-6 lg:p-8 flex flex-col justify-between">
+          <div>
+            <h3 className="text-xl font-bold text-neutral-800 dark:text-neutral-100 mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
+              <Link href={`/blog/${post.slug}`}>
+                {post.title}
+              </Link>
+            </h3>
+            
+            <p className="text-neutral-600 dark:text-neutral-400 mb-4 line-clamp-3">
+              {post.excerpt}
+            </p>
           </div>
           
-          <Link
-            href={`/blog/${post.slug}`}
-            className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-medium hover:gap-3 transition-all duration-200"
-          >
-            Read Article
-            <ArrowRight className="h-4 w-4" />
-          </Link>
+          <div>
+            <div className="flex items-center gap-4 text-sm text-neutral-500 dark:text-neutral-500 mb-4">
+              <div className="flex items-center gap-1">
+                <User className="h-4 w-4" />
+                <span>{post.author.name}</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <Calendar className="h-4 w-4" />
+                <span>{new Date(post.publishDate).toLocaleDateString()}</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <Clock className="h-4 w-4" />
+                <span>{post.readTime}</span>
+              </div>
+            </div>
+            
+            <Link
+              href={`/blog/${post.slug}`}
+              className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-medium hover:gap-3 transition-all duration-200"
+            >
+              Read Article
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
         </div>
       </div>
     </div>
@@ -234,72 +240,78 @@ function FeaturedPostCard({ post }: { post: BlogPost }) {
 
 function BlogPostCard({ post }: { post: BlogPost }) {
   return (
-    <div className="group bg-white dark:bg-neutral-800 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
-      <div className="relative h-48">
-        <Image
-          src={post.coverImage}
-          alt={post.title}
-          fill
-          className="object-cover group-hover:scale-105 transition-transform duration-300"
-        />
-        <div className="absolute top-3 left-3">
-          <span className="px-2 py-1 bg-blue-600 text-white text-xs font-medium rounded">
-            {blogCategories[post.category]}
-          </span>
-        </div>
-        {post.featured && (
-          <div className="absolute top-3 right-3">
-            <Star className="h-5 w-5 text-yellow-500 fill-current" />
-          </div>
-        )}
-      </div>
-      
-      <div className="p-6">
-        <h3 className="text-lg font-bold text-neutral-800 dark:text-neutral-100 mb-2 group-hover:text-blue-600 transition-colors">
-          <Link href={`/blog/${post.slug}`}>
-            {post.title}
-          </Link>
-        </h3>
-        
-        <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-4 line-clamp-2">
-          {post.excerpt}
-        </p>
-        
-        <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-500 mb-4">
-          <div className="flex items-center gap-1">
-            <User className="h-3 w-3" />
-            {post.author.name}
-          </div>
-          <div className="flex items-center gap-1">
-            <Calendar className="h-3 w-3" />
-            {new Date(post.publishDate).toLocaleDateString()}
-          </div>
-          <div className="flex items-center gap-1">
-            <Clock className="h-3 w-3" />
-            {post.readTime}
-          </div>
-        </div>
-        
-        <div className="flex flex-wrap gap-1 mb-4">
-          {post.tags.slice(0, 3).map((tag) => (
-            <span key={tag} className="px-2 py-1 bg-neutral-100 dark:bg-neutral-700 text-neutral-600 dark:text-neutral-400 text-xs rounded">
-              {tag}
+    <div className="group bg-white dark:bg-neutral-800 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 h-full">
+      <div className="flex flex-col h-full">
+        <div className="relative h-48">
+          <Image
+            src={post.coverImage}
+            alt={post.title}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+          <div className="absolute top-3 left-3">
+            <span className="px-2 py-1 bg-blue-600 text-white text-xs font-medium rounded">
+              {blogCategories[post.category]}
             </span>
-          ))}
-          {post.tags.length > 3 && (
-            <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-700 text-neutral-600 dark:text-neutral-400 text-xs rounded">
-              +{post.tags.length - 3}
-            </span>
+          </div>
+          {post.featured && (
+            <div className="absolute top-3 right-3">
+              <Star className="h-5 w-5 text-yellow-500 fill-current" />
+            </div>
           )}
         </div>
         
-        <Link
-          href={`/blog/${post.slug}`}
-          className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-medium text-sm hover:gap-3 transition-all duration-200"
-        >
-          Read More
-          <ArrowRight className="h-4 w-4" />
-        </Link>
+        <div className="p-6 flex flex-col justify-between flex-1">
+          <div>
+            <h3 className="text-lg font-bold text-neutral-800 dark:text-neutral-100 mb-2 group-hover:text-blue-600 transition-colors line-clamp-2">
+              <Link href={`/blog/${post.slug}`}>
+                {post.title}
+              </Link>
+            </h3>
+            
+            <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-4 line-clamp-2">
+              {post.excerpt}
+            </p>
+          </div>
+          
+          <div>
+            <div className="flex items-center gap-3 text-sm text-neutral-500 dark:text-neutral-500 mb-4">
+              <div className="flex items-center gap-1">
+                <User className="h-4 w-4" />
+                <span>{post.author.name}</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <Calendar className="h-4 w-4" />
+                <span>{new Date(post.publishDate).toLocaleDateString()}</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <Clock className="h-4 w-4" />
+                <span>{post.readTime}</span>
+              </div>
+            </div>
+            
+            <div className="flex flex-wrap gap-1 mb-4">
+              {post.tags.slice(0, 3).map((tag) => (
+                <span key={tag} className="px-2 py-1 bg-neutral-100 dark:bg-neutral-700 text-neutral-600 dark:text-neutral-400 text-xs rounded">
+                  {tag}
+                </span>
+              ))}
+              {post.tags.length > 3 && (
+                <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-700 text-neutral-600 dark:text-neutral-400 text-xs rounded">
+                  +{post.tags.length - 3}
+                </span>
+              )}
+            </div>
+            
+            <Link
+              href={`/blog/${post.slug}`}
+              className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-medium text-sm hover:gap-3 transition-all duration-200"
+            >
+              Read More
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );
