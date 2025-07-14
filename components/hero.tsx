@@ -18,12 +18,12 @@ export function Hero() {
 
       <div className="text-balance relative z-20 mx-auto mb-4 mt-4 max-w-4xl text-center text-2xl sm:text-3xl font-semibold tracking-tight text-gray-700 dark:text-neutral-300 md:text-7xl px-4">
         <h1>
-          <Balancer>Turn your startup idea into reality.</Balancer>
+          <Balancer>Leading Clean Energy Market Innovation</Balancer>
         </h1>
       </div>
       <p className="relative z-20 mx-auto mt-4 max-w-lg px-4 text-center text-sm sm:text-base/6 text-gray-600 dark:text-gray-200">
-        We help seed-stage startups build scalable businesses through strategic consulting, 
-        technical architecture, and hands-on execution from day one.
+Expert consulting for solar, wind, storage, and hydrogen companies to achieve 
+        technology breakthroughs, market expansion, and sustainable growth.
       </p>
       <div className="mb-10 mt-8 flex w-full flex-col items-center justify-center gap-4 px-8 sm:flex-row md:mb-20 relative z-20">
         <button

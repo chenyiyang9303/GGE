@@ -5,13 +5,13 @@ import React from "react";
 import { motion } from "framer-motion";
 import { 
   TrendingUp, 
-  Code, 
+  BarChart3, 
   DollarSign, 
   Users, 
   Target,
   Lightbulb,
-  Shield,
-  BarChart3
+  Zap,
+  Globe
 } from "lucide-react";
 
 export function Services() {
@@ -22,55 +22,55 @@ export function Services() {
     >
       <Header>
         <h2 className="font-sans text-bold text-xl text-center md:text-4xl w-fit mx-auto font-bold tracking-tight text-neutral-800 dark:text-neutral-100">
-          Services for Seed-Stage Startups
+          Clean Energy Consulting Services
         </h2>
       </Header>
       <p className="max-w-lg text-sm text-neutral-600 text-center mx-auto mt-4 dark:text-neutral-400">
-        From idea validation to market entry, we provide comprehensive consulting 
-        to help you build a scalable, fundable business.
+        From market analysis to technology upgrades, we provide comprehensive consulting 
+        services for clean energy companies to achieve sustainable growth and market breakthroughs.
       </p>
       
       <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
         <ServiceCard
+          icon={<BarChart3 className="h-6 w-6" />}
+          title="Market Analysis & Strategy"
+          description="Deep analysis of clean energy market trends to develop precise market entry and competitive strategies."
+          features={["Industry policy analysis", "Competitive landscape review", "Market opportunity identification", "Business model design"]}
+        />
+        
+        <ServiceCard
           icon={<Lightbulb className="h-6 w-6" />}
-          title="Business Strategy & Validation"
-          description="Validate your idea, define your business model, and create a roadmap for sustainable growth."
-          features={["Market research & analysis", "Business model canvas", "Competitive landscape", "Go-to-market strategy"]}
+          title="Technology Roadmap Planning"
+          description="Provide technology development path guidance and product planning consulting for clean energy companies."
+          features={["Technology trend analysis", "Product technology selection", "R&D pathway planning", "Technical risk assessment"]}
         />
         
         <ServiceCard
-          icon={<Code className="h-6 w-6" />}
-          title="Technical Architecture"
-          description="Build scalable tech infrastructure from day one with our experienced engineering guidance."
-          features={["Technology stack selection", "System architecture design", "Development roadmap", "Technical debt prevention"]}
+          icon={<Globe className="h-6 w-6" />}
+          title="International Market Expansion"
+          description="Assist clean energy companies in expanding overseas markets and establishing global sales networks."
+          features={["Overseas market analysis", "Export strategy development", "Channel partner development", "Localization guidance"]}
         />
         
         <ServiceCard
-          icon={<DollarSign className="h-6 w-6" />}
-          title="Funding & Investment"
-          description="Prepare for funding rounds with pitch decks, financial models, and investor connections."
-          features={["Pitch deck creation", "Financial modeling", "Investor introductions", "Due diligence prep"]}
-        />
-        
-        <ServiceCard
-          icon={<Users className="h-6 w-6" />}
-          title="Team Building"
-          description="Hire the right people at the right time and build a strong company culture."
-          features={["Hiring strategy", "Interview processes", "Equity planning", "Culture development"]}
+          icon={<Zap className="h-6 w-6" />}
+          title="Digital Transformation"
+          description="Drive traditional energy companies toward digital and intelligent transformation and upgrades."
+          features={["Digital diagnosis", "Smart transformation solutions", "Operational efficiency improvement", "Data-driven decision making"]}
         />
         
         <ServiceCard
           icon={<Target className="h-6 w-6" />}
-          title="Product-Market Fit"
-          description="Find and optimize your product-market fit through data-driven experimentation."
-          features={["User research", "MVP development", "A/B testing", "Metrics & analytics"]}
+          title="Project Investment Consulting"
+          description="Provide investment evaluation, risk analysis, and financing strategy guidance for clean energy projects."
+          features={["Investment feasibility analysis", "Risk assessment models", "Financing solution design", "Investor connections"]}
         />
         
         <ServiceCard
-          icon={<BarChart3 className="h-6 w-6" />}
-          title="Growth & Scaling"
-          description="Scale your operations, processes, and team as you grow from startup to scale-up."
-          features={["Operations optimization", "Process documentation", "Performance metrics", "Scaling strategy"]}
+          icon={<Users className="h-6 w-6" />}
+          title="Supply Chain Integration"
+          description="Help companies establish comprehensive clean energy supply chain partnerships and ecosystem networks."
+          features={["Supply chain optimization", "Partner development", "Industry alliance building", "Resource integration strategy"]}
         />
       </div>
     </div>

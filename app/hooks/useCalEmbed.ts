@@ -29,7 +29,7 @@ export const useCalEmbed = () => {
             },
           },
           hideEventTypeDetails: CONSTANTS.CALCOM_HIDE_EVENT_TYPE_DETAILS,
-          layout: CONSTANTS.CALCOM_LAYOUT as any,
+          layout: CONSTANTS.CALCOM_LAYOUT,
         });
         console.log("✅ UI配置设置完成");
         console.log("🎉 Cal.com初始化完成！");

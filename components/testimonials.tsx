@@ -15,65 +15,65 @@ export function Testimonials() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-sans text-3xl md:text-4xl font-bold tracking-tight text-neutral-800 dark:text-neutral-100 mb-4">
-            What Our Clients Say
+            Client Testimonials
           </h2>
           <p className="text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
-            Don't just take our word for it. Here's what startup founders say about 
-            working with our consulting team.
+            Hear from clean energy industry leaders about their real experiences with our 
+            professional consulting services and how we helped them achieve breakthrough results.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <TestimonialCard
-            name="Sarah Chen"
-            title="CEO, TechFlow AI"
+            name="Michael Chen"
+            title="Chairman, SolarTech Energy"
             image="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60"
-            testimonial="The strategic guidance we received was game-changing. They helped us pivot our business model and secure our Series A funding. Our revenue grew 10x in 8 months."
+            testimonial="Their professional market analysis and strategic guidance helped us successfully break into international markets. Overseas revenue grew from 5% to 45%, and we're now a global distributed solar solutions provider."
             rating={5}
             delay={0}
           />
           
           <TestimonialCard
-            name="Marcus Rodriguez"
-            title="Founder, GreenCart"
+            name="David Wang"
+            title="CTO, WindPower Energy"
             image="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60"
-            testimonial="Their technical expertise saved us months of development time. The architecture they designed scaled beautifully as we grew from 5K to 50K users."
+            testimonial="The digital transformation completely revolutionized our O&M model. Power generation efficiency increased by 23%, O&M costs decreased by 35%, giving our aging wind farms new life."
             rating={5}
             delay={0.2}
           />
           
           <TestimonialCard
-            name="Dr. Priya Patel"
-            title="CEO, HealthLink"
+            name="Dr. Sarah Zhang"
+            title="Founder & CTO, EnergyStore Tech"
             image="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
-            testimonial="Navigating healthcare regulations was daunting. Their compliance expertise and investor connections were invaluable. We're now HIPAA certified and funded."
+            testimonial="Professional technology roadmap planning helped us successfully transition from consumer-grade products to grid-scale applications. Annual revenue grew from $210M to $680M, with market share increasing to 25%."
             rating={5}
             delay={0.4}
           />
           
           <TestimonialCard
-            name="Alex Thompson"
-            title="Co-founder, EduNext"
+            name="Robert Liu"
+            title="Chairman & CEO, HydroPower Tech"
             image="https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80"
-            testimonial="They didn't just give us advice—they worked alongside us. The product-market fit strategies they implemented increased our retention from 40% to 85%."
+            testimonial="Market analysis and technology roadmap guidance helped us successfully enter the hydrogen heavy-duty truck market. We transitioned from small-scale applications to heavy-duty trucks, achieving 12% market share."
             rating={5}
             delay={0.6}
           />
           
           <TestimonialCard
-            name="Lisa Wang"
-            title="Founder, FinFlow"
+            name="Emily Chen"
+            title="Founder, GreenEnergy Tech"
             image="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3534&q=80"
-            testimonial="The pitch deck they helped us create was phenomenal. We secured our seed round in just 6 weeks. Their investor network opened doors we couldn't access alone."
+            testimonial="Supply chain integration strategy helped us build a comprehensive partnership ecosystem. Supply chain costs decreased by 30%, product delivery cycles shortened by 50%, significantly boosting competitiveness."
             rating={5}
             delay={0.8}
           />
           
           <TestimonialCard
-            name="David Kim"
-            title="CEO, LogiTech"
+            name="James Zhao"
+            title="Chairman, SmartEnergy Manufacturing"
             image="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80"
-            testimonial="Their team became an extension of ours. The technical architecture and business strategy guidance helped us avoid costly mistakes and scale efficiently."
+            testimonial="The team became our strategic partner. Digital transformation and internationalization guidance helped us avoid costly mistakes and we've now successfully entered European and US markets."
             rating={5}
             delay={1.0}
           />
@@ -92,10 +92,10 @@ export function Testimonials() {
               ))}
             </div>
             <p className="text-lg font-medium text-neutral-800 dark:text-neutral-100">
-              4.9/5 average rating from 50+ startup founders
+              4.9/5 average rating from 80+ clean energy industry leaders
             </p>
             <p className="text-neutral-600 dark:text-neutral-400">
-              Join the founders who've successfully scaled their startups with our guidance
+              Join the clean energy companies that achieved market breakthroughs with our guidance
             </p>
           </motion.div>
         </div>

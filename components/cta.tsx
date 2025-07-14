@@ -16,15 +16,15 @@ export function CTAWithDashedGridLines() {
       <GridLineVertical className="left-auto right-0" offset="80px" />
       <div className="md:col-span-2 p-8 md:p-14">
         <h2 className="text-left text-neutral-500 dark:text-neutral-200 text-xl md:text-3xl tracking-tight font-medium">
-          Turn your startup idea into{" "}
+          Turn your clean energy vision into{" "}
           <span className="font-bold text-black dark:text-white">
-            fundable reality
+            market reality
           </span>
         </h2>
         <p className="text-left text-neutral-500 mt-4 max-w-lg dark:text-neutral-200 text-xl md:text-3xl tracking-tight font-medium">
-          Get expert <span className="text-blue-700">consulting</span>{" "}
-          from seed to{" "}
-          <span className="text-indigo-700">Series A</span>.
+          Get professional <span className="text-blue-700">market consulting</span>{" "}
+          from concept to{" "}
+          <span className="text-indigo-700">commercial success</span>.
         </p>
 
         <div className="flex items-start sm:items-center flex-col sm:flex-row sm:gap-4">
@@ -34,28 +34,28 @@ export function CTAWithDashedGridLines() {
             data-cal-config={`{"layout":"${calConfig.layout}"}`}
             className="mt-8 flex space-x-2 items-center group text-base px-6 py-3 rounded-md bg-gradient-to-b from-blue-500 to-blue-700 text-white shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset] hover:-translate-y-0.5 transition duration-200 cursor-pointer font-semibold"
           >
-            <span>Book Free Call</span>
+            <span>Free Consultation</span>
             <HiArrowRight className="text-white group-hover:translate-x-1 stroke-[1px] h-3 w-3 mt-0.5 transition-transform duration-200" />
           </button>
           <button 
             onClick={() => window.location.href = '/#case-studies'}
             className="mt-8 flex space-x-2 items-center group text-base px-6 py-3 rounded-md bg-transparent text-black dark:text-white border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 hover:-translate-y-0.5 transition duration-200 cursor-pointer font-bold"
           >
-            <span>View Case Studies</span>
+            <span>View Success Stories</span>
             <IconMessageCircleQuestion className="text-black dark:text-white group-hover:translate-x-1 stroke-[1px] h-3 w-3 mt-0.5 transition-transform duration-200" />
           </button>
         </div>
       </div>
       <div className="border-t md:border-t-0 md:border-l border-dashed p-8 md:p-14">
         <p className="text-base text-neutral-700 dark:text-neutral-200">
-          &quot;The strategic guidance and technical expertise helped us secure our Series A funding in just 8 months. Their consulting transformed our startup from idea to investable business.&quot;
+          &quot;Their professional market analysis and strategic guidance helped us successfully break into international markets. Overseas revenue grew from 5% to 45%, and we're now a global distributed solar solutions provider.&quot;
         </p>
         <div className="flex flex-col text-sm items-start mt-4 gap-1">
           <p className="font-bold text-neutral-800 dark:text-neutral-200">
-            Sarah Chen
+            Michael Chen
           </p>
           <p className="text-neutral-500 dark:text-neutral-400">
-            CEO, TechFlow AI
+            Chairman, SolarTech Energy
           </p>
         </div>
       </div>

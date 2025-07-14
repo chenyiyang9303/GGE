@@ -21,7 +21,7 @@ export function CalProvider({ children }: { children: React.ReactNode }) {
     (async function () {
       try {
         console.log("📞 调用getCalApi...");
-        const cal = await getCalApi({ namespace: "startup-consulting" });
+        const cal = await getCalApi({ namespace: "chat-with-manu-demo" });
         
         if (!mounted) return; // 防止组件卸载后设置状态
         

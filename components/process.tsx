@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 import { 
   Search, 
   Target, 
-  Code2, 
-  Rocket,
+  Lightbulb, 
+  TrendingUp,
   ArrowRight
 } from "lucide-react";
 
@@ -20,11 +20,11 @@ export function Process() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-sans text-3xl md:text-4xl font-bold tracking-tight text-neutral-800 dark:text-neutral-100 mb-4">
-            Our Proven Process
+            Our Consulting Process
           </h2>
           <p className="text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
-            From initial assessment to successful implementation, we guide you through 
-            every step of building a fundable startup.
+            From in-depth research to strategic implementation, we provide comprehensive 
+            guidance for clean energy companies to achieve transformation from planning to success.
           </p>
         </div>
 
@@ -33,13 +33,13 @@ export function Process() {
             <ProcessStep
               step={1}
               icon={<Search className="h-8 w-8" />}
-              title="Discovery & Diagnosis"
-              description="We analyze your idea, market opportunity, and current challenges to understand your unique situation."
+              title="In-Depth Research & Analysis"
+              description="Comprehensive understanding of company status, market environment, and industry trends to identify key opportunities and challenges."
               details={[
-                "Market research & validation",
-                "Competitive analysis",
-                "Business model assessment",
-                "Technical feasibility review"
+                "Company status deep diagnosis",
+                "Market environment analysis",
+                "Competitive landscape research",
+                "Policy environment assessment"
               ]}
               delay={0}
             />
@@ -47,41 +47,41 @@ export function Process() {
             <ProcessStep
               step={2}
               icon={<Target className="h-6 w-6" />}
-              title="Strategy & Planning"
-              description="Together, we create a comprehensive roadmap tailored to your specific goals and constraints."
+              title="Strategic Planning & Development"
+              description="Based on research results, develop practical development strategies and detailed execution pathways."
               details={[
-                "Business strategy formulation",
-                "Go-to-market planning", 
-                "Technical architecture design",
-                "Funding strategy development"
+                "Precise development strategy",
+                "Market entry strategy design", 
+                "Technology roadmap guidance",
+                "Business model optimization"
               ]}
               delay={0.2}
             />
             
             <ProcessStep
               step={3}
-              icon={<Code2 className="h-6 w-6" />}
-              title="Implementation"
-              description="We work alongside your team to execute the plan, providing hands-on guidance and expertise."
+              icon={<Lightbulb className="h-6 w-6" />}
+              title="Implementation & Execution"
+              description="Work closely with company teams, providing professional guidance to ensure effective strategy execution."
               details={[
-                "MVP development guidance",
-                "Team building support",
-                "Process optimization",
-                "Performance monitoring"
+                "Detailed implementation design",
+                "Team capability building",
+                "Process control & optimization",
+                "Key milestone monitoring"
               ]}
               delay={0.4}
             />
             
             <ProcessStep
               step={4}
-              icon={<Rocket className="h-6 w-6" />}
-              title="Growth & Scale"
-              description="We help you prepare for the next level with funding preparation and scaling strategies."
+              icon={<TrendingUp className="h-6 w-6" />}
+              title="Continuous Optimization"
+              description="Track results and continuously optimize to ensure companies achieve sustainable development and long-term success."
               details={[
-                "Investor pitch preparation",
-                "Due diligence support",
-                "Scaling strategy",
-                "Ongoing advisory"
+                "Performance evaluation & analysis",
+                "Continuous improvement",
+                "Scalable development support",
+                "Long-term strategic advisory"
               ]}
               delay={0.6}
             />
@@ -96,7 +96,7 @@ export function Process() {
             className="inline-flex items-center gap-3 bg-blue-50 dark:bg-blue-900/20 px-6 py-3 rounded-full"
           >
             <span className="text-blue-600 dark:text-blue-400 font-medium">
-              Ready to start your journey?
+              Ready to start your clean energy journey?
             </span>
             <ArrowRight className="h-4 w-4 text-blue-600 dark:text-blue-400" />
           </motion.div>
