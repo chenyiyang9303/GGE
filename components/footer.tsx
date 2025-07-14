@@ -15,7 +15,15 @@ export function Footer() {
     },
     {
       title: "Case Studies",
-      href: "/#case-studies",
+      href: "/case-studies",
+    },
+    {
+      title: "Reports",
+      href: "/reports",
+    },
+    {
+      title: "Blog",
+      href: "/blog",
     },
     {
       title: "About",

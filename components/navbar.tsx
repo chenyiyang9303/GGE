@@ -29,16 +29,20 @@ export const Navbar = () => {
       link: "/#services",
     },
     {
-      name: "Process",
-      link: "/#process",
-    },
-    {
       name: "Case Studies",
-      link: "/#case-studies",
+      link: "/case-studies",
     },
     {
-      name: "Contact",
-      link: "/#contact",
+      name: "Reports",
+      link: "/reports",
+    },
+    {
+      name: "Blog",
+      link: "/blog",
+    },
+    {
+      name: "About",
+      link: "/about",
     },
   ];
 
