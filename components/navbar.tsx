@@ -30,7 +30,7 @@ export const Navbar = () => {
     },
     {
       name: "Case Studies",
-      link: "/case-studies",
+      link: "/#case-studies",
     },
     {
       name: "Reports",
@@ -84,7 +84,7 @@ const DesktopNav = ({ navItems, visible }: NavbarProps) => {
         boxShadow: visible
           ? "0 0 24px rgba(34, 42, 53, 0.06), 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(34, 42, 53, 0.04), 0 0 4px rgba(34, 42, 53, 0.08), 0 16px 68px rgba(47, 48, 55, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1) inset"
           : "none",
-        width: visible ? "40%" : "100%",
+        width: visible ? "80%" : "100%",
         y: visible ? 20 : 0,
       }}
       transition={{
@@ -93,7 +93,7 @@ const DesktopNav = ({ navItems, visible }: NavbarProps) => {
         damping: 50,
       }}
       style={{
-        minWidth: "800px",
+        minWidth: visible ? "900px" : "800px",
       }}
       className={cn(
         "hidden lg:flex flex-row  self-start bg-transparent dark:bg-transparent items-center justify-between py-2 max-w-7xl mx-auto px-4 rounded-full relative z-[60] w-full",
@@ -122,37 +122,6 @@ const DesktopNav = ({ navItems, visible }: NavbarProps) => {
       <div className="flex items-center gap-4 relative z-30">
         <ModeToggle />
 
-        <AnimatePresence mode="popLayout" initial={false}>
-          {!visible && (
-            <motion.div
-              initial={{
-                x: 100,
-                opacity: 0,
-              }}
-              animate={{
-                x: 0,
-                opacity: [0, 0, 1],
-              }}
-              exit={{
-                x: 100,
-                opacity: [0, 0, 0],
-              }}
-              transition={{
-                duration: 0.5,
-                ease: "easeOut",
-              }}
-            >
-              <Button
-                as={Link}
-                href="/#case-studies"
-                variant="secondary"
-                className="hidden md:block "
-              >
-                Our Work
-              </Button>
-            </motion.div>
-          )}
-        </AnimatePresence>
         <button
           data-cal-namespace={calConfig.namespace}
           data-cal-link={calConfig.link}

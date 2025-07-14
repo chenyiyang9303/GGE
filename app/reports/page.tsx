@@ -6,6 +6,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Calendar, Clock, Download, FileText, Filter, Star, Tag, User } from "lucide-react";
 import { getAllReports, getFeaturedReports, getReportsByCategory, reportCategories, Report } from "@/lib/reports-data";
+import { ReportCover } from "@/components/report-cover-designs";
 
 export default function ReportsPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -147,15 +148,29 @@ export default function ReportsPage() {
 }
 
 function FeaturedReportCard({ report }: { report: Report }) {
+  const coverVariants = ['hexagon', 'wave', 'circle', 'diamond', 'organic'] as const;
+  const gradients = [
+    'from-blue-600 to-green-600',
+    'from-purple-600 to-blue-600', 
+    'from-green-600 to-teal-600',
+    'from-orange-600 to-red-600',
+    'from-indigo-600 to-purple-600'
+  ];
+  
+  const variantIndex = Math.abs(report.id.split('').reduce((a, b) => a + b.charCodeAt(0), 0)) % coverVariants.length;
+  const gradientIndex = Math.abs(report.id.split('').reduce((a, b) => a + b.charCodeAt(0), 0)) % gradients.length;
+  
   return (
     <div className="group bg-white dark:bg-neutral-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
       <div className="flex flex-col lg:flex-row">
         <div className="lg:w-1/2 relative h-64 lg:h-auto">
-          <Image
-            src={report.coverImage}
-            alt={report.title}
-            fill
-            className="object-cover group-hover:scale-105 transition-transform duration-300"
+          <ReportCover
+            title={report.title}
+            subtitle={report.subtitle}
+            category={reportCategories[report.category]}
+            publishDate={report.publishDate}
+            variant={coverVariants[variantIndex]}
+            gradient={gradients[gradientIndex]}
           />
           <div className="absolute top-4 left-4">
             <span className="px-3 py-1 bg-yellow-500 text-white text-xs font-medium rounded-full flex items-center gap-1">
@@ -211,20 +226,29 @@ function FeaturedReportCard({ report }: { report: Report }) {
 }
 
 function ReportCard({ report }: { report: Report }) {
+  const coverVariants = ['hexagon', 'wave', 'circle', 'diamond', 'organic'] as const;
+  const gradients = [
+    'from-blue-500 to-green-500',
+    'from-purple-500 to-blue-500', 
+    'from-green-500 to-teal-500',
+    'from-orange-500 to-red-500',
+    'from-indigo-500 to-purple-500'
+  ];
+  
+  const variantIndex = Math.abs(report.id.split('').reduce((a, b) => a + b.charCodeAt(0), 0)) % coverVariants.length;
+  const gradientIndex = Math.abs(report.id.split('').reduce((a, b) => a + b.charCodeAt(0), 0)) % gradients.length;
+  
   return (
     <div className="group bg-white dark:bg-neutral-800 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
       <div className="relative h-48">
-        <Image
-          src={report.coverImage}
-          alt={report.title}
-          fill
-          className="object-cover group-hover:scale-105 transition-transform duration-300"
+        <ReportCover
+          title={report.title}
+          subtitle={report.subtitle}
+          category={reportCategories[report.category]}
+          publishDate={report.publishDate}
+          variant={coverVariants[variantIndex]}
+          gradient={gradients[gradientIndex]}
         />
-        <div className="absolute top-3 left-3">
-          <span className="px-2 py-1 bg-blue-600 text-white text-xs font-medium rounded">
-            {reportCategories[report.category]}
-          </span>
-        </div>
         {report.featured && (
           <div className="absolute top-3 right-3">
             <Star className="h-5 w-5 text-yellow-500 fill-current" />

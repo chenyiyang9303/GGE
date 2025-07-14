@@ -42,7 +42,7 @@ export default function AboutPage() {
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
-                href="/case-studies"
+                href="/#case-studies"
                 className="inline-flex items-center gap-2 bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 hover:bg-neutral-50 dark:hover:bg-neutral-700 text-neutral-800 dark:text-neutral-200 px-8 py-3 rounded-lg font-medium transition-colors"
               >
                 View Our Work

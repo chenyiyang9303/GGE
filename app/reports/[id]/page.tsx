@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, Calendar, Clock, Download, FileText, User, Eye, Share2, BookOpen, Target, Database, Users, Star } from "lucide-react";
 import { getReportById, getAllReports, getRelatedReports, reportCategories } from "@/lib/reports-data";
+import { ReportCover } from "@/components/report-cover-designs";
 
 interface ReportPageProps {
   params: {
@@ -98,11 +99,13 @@ export default function ReportDetailPage({ params }: ReportPageProps) {
             
             <div className="lg:col-span-1">
               <div className="relative h-80 rounded-xl overflow-hidden shadow-lg">
-                <Image
-                  src={report.coverImage}
-                  alt={report.title}
-                  fill
-                  className="object-cover"
+                <ReportCover
+                  title={report.title}
+                  subtitle={report.subtitle}
+                  category={reportCategories[report.category]}
+                  publishDate={report.publishDate}
+                  variant="organic"
+                  gradient="from-blue-600 to-green-600"
                 />
               </div>
             </div>
