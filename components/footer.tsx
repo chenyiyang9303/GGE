@@ -35,24 +35,6 @@ export function Footer() {
     },
   ];
 
-  const socials = [
-    {
-      title: "Facebook",
-      href: "#",
-    },
-    {
-      title: "Instagram",
-      href: "#",
-    },
-    {
-      title: "Twitter",
-      href: "#",
-    },
-    {
-      title: "LinkedIn",
-      href: "#",
-    },
-  ];
   const legals = [
     {
       title: "Privacy Policy",
@@ -104,7 +86,7 @@ export function Footer() {
             &copy; copyright Omven LLC 2025. All rights reserved.
           </div>
         </div>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 items-start mt-10 sm:mt-0 md:mt-0">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-10 items-start mt-10 sm:mt-0 md:mt-0">
           <div className="flex justify-center space-y-4 flex-col w-full">
             <p className="transition-colors hover:text-text-neutral-800 text-neutral-600 dark:text-neutral-300 font-bold">
               Pages
@@ -123,23 +105,6 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="flex justify-center space-y-4 flex-col">
-            <p className="transition-colors hover:text-text-neutral-800 text-neutral-600 dark:text-neutral-300 font-bold">
-              Socials
-            </p>
-            <ul className="transition-colors hover:text-text-neutral-800 text-neutral-600 dark:text-neutral-300 list-none space-y-4">
-              {socials.map((social, idx) => (
-                <li key={"social" + idx} className="list-none">
-                  <Link
-                    className="transition-colors hover:text-text-neutral-800 "
-                    href={social.href}
-                  >
-                    {social.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
 
           <div className="flex justify-center space-y-4 flex-col">
             <p className="transition-colors hover:text-text-neutral-800 text-neutral-600 dark:text-neutral-300 font-bold">
