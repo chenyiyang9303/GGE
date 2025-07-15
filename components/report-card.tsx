@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Calendar, Clock, Download, FileText, User, Star } from "lucide-react";
 import { Report, reportCategories } from "@/lib/reports-data";
 import { ReportCover } from "@/components/report-cover-designs";
+import { formatDate } from "@/lib/utils";
 
 interface ReportCardProps {
   report: Report;
@@ -79,7 +80,7 @@ export function ReportCard({
             </div>
             <div className="flex items-center gap-1">
               <Calendar className="h-3 w-3" />
-              {new Date(report.publishDate).toLocaleDateString()}
+              {formatDate(report.publishDate)}
             </div>
             <div className="flex items-center gap-1">
               <FileText className="h-3 w-3" />
@@ -173,7 +174,7 @@ function FeaturedReportCard({ report, className }: { report: Report; className?:
               <div className="flex items-center gap-4 text-xs text-neutral-500 dark:text-neutral-500 mb-4">
                 <div className="flex items-center gap-1">
                   <Calendar className="h-3 w-3" />
-                  {new Date(report.publishDate).toLocaleDateString()}
+                  {formatDate(report.publishDate)}
                 </div>
                 <div className="flex items-center gap-1">
                   <Clock className="h-3 w-3" />
@@ -243,7 +244,7 @@ export function RelatedReportCard({ report }: { report: Report }) {
           <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-500 mb-3">
             <div className="flex items-center gap-1">
               <Calendar className="h-3 w-3" />
-              {new Date(report.publishDate).toLocaleDateString()}
+              {formatDate(report.publishDate)}
             </div>
             <div className="flex items-center gap-1">
               <Clock className="h-3 w-3" />

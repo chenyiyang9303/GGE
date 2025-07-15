@@ -6,6 +6,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Calendar, Clock, User, ArrowRight, Search, Filter, Tag, Star } from "lucide-react";
 import { getAllBlogPosts, getFeaturedBlogPosts, getBlogPostsByCategory, blogCategories, BlogPost } from "@/lib/blog-data";
+import { formatDate } from "@/lib/utils";
 
 export default function BlogPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -216,7 +217,7 @@ function FeaturedPostCard({ post }: { post: BlogPost }) {
               </div>
               <div className="flex items-center gap-1">
                 <Calendar className="h-4 w-4" />
-                <span>{new Date(post.publishDate).toLocaleDateString()}</span>
+                <span>{formatDate(post.publishDate)}</span>
               </div>
               <div className="flex items-center gap-1">
                 <Clock className="h-4 w-4" />
@@ -282,7 +283,7 @@ function BlogPostCard({ post }: { post: BlogPost }) {
               </div>
               <div className="flex items-center gap-1">
                 <Calendar className="h-4 w-4" />
-                <span>{new Date(post.publishDate).toLocaleDateString()}</span>
+                <span>{formatDate(post.publishDate)}</span>
               </div>
               <div className="flex items-center gap-1">
                 <Clock className="h-4 w-4" />

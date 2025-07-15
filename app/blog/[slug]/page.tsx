@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, Calendar, Clock, User, Share2, Tag, Eye, BookOpen } from "lucide-react";
 import { getBlogPostBySlug, getAllBlogPosts, getRelatedBlogPosts, blogCategories } from "@/lib/blog-data";
+import { formatDate } from "@/lib/utils";
 
 interface BlogPostPageProps {
   params: {
@@ -47,7 +48,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
               <div className="flex items-center gap-4 text-sm text-neutral-600 dark:text-neutral-400">
                 <div className="flex items-center gap-1">
                   <Calendar className="h-4 w-4" />
-                  {new Date(post.publishDate).toLocaleDateString()}
+                  {formatDate(post.publishDate)}
                 </div>
                 <div className="flex items-center gap-1">
                   <Clock className="h-4 w-4" />
@@ -268,7 +269,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                     <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-500 mb-4">
                       <div className="flex items-center gap-1">
                         <Calendar className="h-3 w-3" />
-                        {new Date(relatedPost.publishDate).toLocaleDateString()}
+                        {formatDate(relatedPost.publishDate)}
                       </div>
                       <div className="flex items-center gap-1">
                         <Clock className="h-3 w-3" />

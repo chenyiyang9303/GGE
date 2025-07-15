@@ -5,6 +5,7 @@ import { ArrowLeft, Calendar, Clock, Download, FileText, User, Eye, Share2, Book
 import { getReportById, getAllReports, getRelatedReports, reportCategories } from "@/lib/reports-data";
 import { ReportCover } from "@/components/report-cover-designs";
 import { RelatedReportCard } from "@/components/report-card";
+import { formatDate } from "@/lib/utils";
 
 interface ReportPageProps {
   params: {
@@ -70,7 +71,7 @@ export default function ReportDetailPage({ params }: ReportPageProps) {
               <div className="flex flex-wrap items-center gap-6 text-sm text-neutral-600 dark:text-neutral-400 mb-8">
                 <div className="flex items-center gap-2">
                   <Calendar className="h-4 w-4" />
-                  Published {new Date(report.publishDate).toLocaleDateString()}
+                  Published {formatDate(report.publishDate)}
                 </div>
                 <div className="flex items-center gap-2">
                   <Clock className="h-4 w-4" />

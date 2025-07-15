@@ -45,7 +45,7 @@ export const caseStudies: CaseStudy[] = [
       { metric: "Export Countries", value: "Expanded to 25 countries" }
     ],
     timeline: "18 months",
-    image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=500&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&h=600&fit=crop&auto=format",
     overview: "SolarTech Energy is a professional photovoltaic module manufacturer that needed expert market analysis and strategic guidance for international market expansion.",
     clientBackground: "Founded in 2015, SolarTech Energy is a leading domestic PV module manufacturer with 5GW annual capacity, but 95% of business was concentrated in the domestic market. With intensifying domestic competition and policy changes, the company urgently needed to explore overseas markets for business diversification.",
     detailedChallenge: "The main challenges faced by the company included: lack of deep understanding of overseas distributed solar markets, unfamiliarity with PV policies and certification requirements in various countries, lack of international sales channels and partners, and need to adapt product specifications and technical standards to different market demands.",
@@ -131,7 +131,7 @@ export const caseStudies: CaseStudy[] = [
       { metric: "Equipment Availability", value: "89% → 96%" }
     ],
     timeline: "12 months",
-    image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=500&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=800&h=600&fit=crop&auto=format",
     overview: "WindPower Energy is a professional wind power operator managing multiple aging wind farms that urgently needed technology upgrades and digital transformation to improve operational efficiency.",
     clientBackground: "Founded in 2008, WindPower Energy was one of the early entrants in China's wind power sector, operating 800MW installed capacity. However, most wind farms were built early with severe equipment aging, leading to continuous decline in power generation efficiency and economic benefits.",
     detailedChallenge: "The core problems faced by the company included: low efficiency of aging wind turbines, high failure rates, continuously rising O&M costs, lack of effective predictive maintenance systems, low digitalization leading to poor management efficiency, and cost pressure from grid parity requirements.",
@@ -217,7 +217,7 @@ export const caseStudies: CaseStudy[] = [
       { metric: "Annual Revenue Growth", value: "$32M → $102M" }
     ],
     timeline: "15 months",
-    image: "https://images.unsplash.com/photo-1587613865763-4b8b0d19c90b?w=500&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=600&fit=crop&auto=format",
     overview: "EnergyStore Tech is a professional battery energy storage system manufacturer that needed expert technical and commercial guidance when entering the grid-scale storage market.",
     clientBackground: "Founded in 2018, EnergyStore Tech initially focused on consumer electronics and small-scale energy storage markets. With rapid development of the new energy industry, the company aimed to expand into the high-value grid-scale storage market but lacked relevant experience and technical guidance.",
     detailedChallenge: "The main challenges faced by the company included: vast differences between grid-scale storage technical requirements and consumer-grade products, lack of deep understanding of power system and grid dispatch needs, unfamiliarity with utility procurement processes and decision mechanisms, and lack of large-scale storage project operational experience and case studies.",
@@ -303,7 +303,7 @@ export const caseStudies: CaseStudy[] = [
       { metric: "Annual Revenue Growth", value: "$23M → $63M" }
     ],
     timeline: "24 months",
-    image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=500&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&h=600&fit=crop&auto=format",
     overview: "HydroPower Tech is a professional hydrogen fuel cell manufacturer that needed expert technology roadmap guidance and market strategic planning when entering the hydrogen heavy-duty truck market.",
     clientBackground: "Founded in 2019, HydroPower Tech was one of the early entrants in China's hydrogen fuel cell sector, mainly producing small-power fuel cell systems. With increasing national hydrogen industry policy support, the company aimed to seize opportunities in the high-value hydrogen heavy-duty truck market.",
     detailedChallenge: "The main challenges faced by the company included: vast differences between hydrogen heavy-duty truck market technical requirements and existing products, lack of high-power fuel cell system development experience, unfamiliarity with heavy-duty truck industry special needs and certification requirements, incomplete hydrogen industry chain support, difficulty in market promotion and customer education, and risk of long investment recovery cycles.",

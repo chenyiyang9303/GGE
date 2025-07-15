@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Calendar, Clock, User, ArrowRight, Star } from "lucide-react";
 import { BlogPost, blogCategories } from "@/lib/blog-data";
+import { formatDate } from "@/lib/utils";
 
 interface FeaturedPostCardProps {
   post: BlogPost;
@@ -52,7 +53,7 @@ export function FeaturedPostCard({ post }: FeaturedPostCardProps) {
               </div>
               <div className="flex items-center gap-1">
                 <Calendar className="h-4 w-4" />
-                <span>{new Date(post.publishDate).toLocaleDateString()}</span>
+                <span>{formatDate(post.publishDate)}</span>
               </div>
               <div className="flex items-center gap-1">
                 <Clock className="h-4 w-4" />

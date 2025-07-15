@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { formatDate } from "@/lib/utils";
 
 interface ReportCoverProps {
   title: string;
@@ -97,11 +98,7 @@ function HexagonCover({ title, subtitle, category, publishDate, gradient }: Omit
             </p>
           )}
           <p className="text-white/80 text-sm">
-            {new Date(publishDate).toLocaleDateString('en-US', { 
-              year: 'numeric', 
-              month: 'long', 
-              day: 'numeric' 
-            })}
+            {formatDate(publishDate)}
           </p>
         </div>
       </div>
@@ -166,11 +163,7 @@ function WaveCover({ title, subtitle, category, publishDate, gradient }: Omit<Re
             </p>
           )}
           <p className="text-white/80 text-sm">
-            {new Date(publishDate).toLocaleDateString('en-US', { 
-              year: 'numeric', 
-              month: 'long', 
-              day: 'numeric' 
-            })}
+            {formatDate(publishDate)}
           </p>
         </div>
       </div>
@@ -222,11 +215,7 @@ function CircleCover({ title, subtitle, category, publishDate, gradient }: Omit<
             </p>
           )}
           <p className="text-white/80 text-sm">
-            {new Date(publishDate).toLocaleDateString('en-US', { 
-              year: 'numeric', 
-              month: 'long', 
-              day: 'numeric' 
-            })}
+            {formatDate(publishDate)}
           </p>
         </div>
       </div>
@@ -282,11 +271,7 @@ function DiamondCover({ title, subtitle, category, publishDate, gradient }: Omit
             </p>
           )}
           <p className="text-white/80 text-sm">
-            {new Date(publishDate).toLocaleDateString('en-US', { 
-              year: 'numeric', 
-              month: 'long', 
-              day: 'numeric' 
-            })}
+            {formatDate(publishDate)}
           </p>
         </div>
       </div>
@@ -352,11 +337,7 @@ function OrganicCover({ title, subtitle, category, publishDate, gradient }: Omit
             </p>
           )}
           <p className="text-white/80 text-sm">
-            {new Date(publishDate).toLocaleDateString('en-US', { 
-              year: 'numeric', 
-              month: 'long', 
-              day: 'numeric' 
-            })}
+            {formatDate(publishDate)}
           </p>
         </div>
       </div>
