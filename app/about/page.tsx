@@ -8,15 +8,15 @@ import { Users, Target, Award, Globe, Lightbulb, TrendingUp, Heart, CheckCircle,
 // Generate avatar URLs for team members using local avatar files
 const getAvatarUrl = (name: string, index: number) => {
   const avatarFiles = [
-    '/avatars/wenxin.svg',           // 温馨 (Wenxin)
-    '/avatars/Li Ming.svg',          // 李明 (Li Ming)
-    '/avatars/Zhang Yu.svg',         // 张雨晴 (Zhang Yuqing)  
-    '/avatars/王浩然.svg',            // 王浩然 (Wang Haoran)
-    '/avatars/Chen Siya.svg',        // 陈思雅 (Chen Siya)
-    '/avatars/Liu Jianguo.svg'       // 刘建国 (Liu Jianguo)
+    '/avatars/wenxin.jpg',           // 温馨 (Wenxin)
+    '/avatars/Li Ming.jpg',          // 李明 (Li Ming)
+    '/avatars/Zhang Yu.png',         // 张雨晴 (Zhang Yuqing)  
+    '/avatars/zhangjinjin.png',      // 张津津 (Zhang Jinjin) - 新成员
+    '/avatars/Chen Siya.png',        // 陈思雅 (Chen Siya)
+    '/avatars/Liu Jianguo.jpg'       // 刘建国 (Liu Jianguo)
   ];
   
-  return avatarFiles[index] || '/avatars/wenxin.svg';
+  return avatarFiles[index] || '/avatars/wenxin.jpg';
 };
 
 export default function AboutPage() {
@@ -201,7 +201,7 @@ export default function AboutPage() {
                 name: "温馨 (Wenxin)",
                 role: "Founder & CEO",
                 expertise: "Solar Technology & Market Strategy",
-                bio: "15+ years leading renewable energy projects and policy development",
+                bio: "10+ years leading renewable energy projects and policy development",
                 image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop&auto=format",
                 linkedin: "#"
               },
@@ -222,10 +222,10 @@ export default function AboutPage() {
                 linkedin: "#"
               },
               {
-                name: "王浩然 (Wang Haoran)",
-                role: "Hydrogen Specialist",
-                expertise: "Green Hydrogen & Industrial Applications",
-                bio: "Chemical engineering PhD focused on hydrogen production and applications",
+                name: "张津津 (Zhang Jinjin)",
+                role: "Technical Specialist",
+                expertise: "Renewable Energy Systems & Integration",
+                bio: "Technical expert focused on renewable energy system optimization and integration",
                 image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&auto=format",
                 linkedin: "#"
               },

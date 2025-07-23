@@ -44,7 +44,7 @@ const reports: Report[] = [
     author: {
       name: "温馨 (Wenxin)",
       title: "Senior Solar Market Analyst",
-      avatar: "/avatars/wenxin.svg"
+      avatar: "/avatars/wenxin.jpg"
     },
     tags: ["Solar Energy", "Market Analysis", "Investment", "Policy"],
     coverImage: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&h=600&fit=crop&auto=format",
@@ -83,7 +83,7 @@ const reports: Report[] = [
     author: {
       name: "李明 (Li Ming)",
       title: "Energy Storage Technology Lead",
-      avatar: "/avatars/Li Ming.svg"
+      avatar: "/avatars/Li Ming.jpg"
     },
     tags: ["Energy Storage", "Battery Technology", "Grid Integration", "Market Trends"],
     coverImage: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&h=600&fit=crop&auto=format",
@@ -121,7 +121,7 @@ const reports: Report[] = [
     author: {
       name: "张雨晴 (Zhang Yuqing)",
       title: "Wind Energy Research Director",
-      avatar: "/avatars/Zhang Yu.svg"
+      avatar: "/avatars/Zhang Yu.png"
     },
     tags: ["Wind Energy", "Offshore Wind", "Turbine Technology", "Grid Integration"],
     coverImage: "https://images.unsplash.com/photo-1548337138-e87d889cc369?w=800&h=600&fit=crop&auto=format",
@@ -156,9 +156,9 @@ const reports: Report[] = [
     previewPages: 7,
     fileSize: "2.1 MB",
     author: {
-      name: "王浩然 (Wang Haoran)",
+      name: "张津津 (Zhang Jinjin)",
       title: "Hydrogen Technology Specialist",
-      avatar: "/avatars/王浩然.svg"
+      avatar: "/avatars/zhangjinjin.png"
     },
     tags: ["Hydrogen", "Green Hydrogen", "Industrial Applications", "Infrastructure"],
     coverImage: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=600&fit=crop&auto=format",
@@ -196,7 +196,7 @@ const reports: Report[] = [
     author: {
       name: "陈思雅 (Chen Siya)",
       title: "Policy Research Manager",
-      avatar: "/avatars/Chen Siya.svg"
+      avatar: "/avatars/Chen Siya.png"
     },
     tags: ["Policy", "Regulation", "Investment Incentives", "Market Development"],
     coverImage: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop&auto=format",
