@@ -5,6 +5,20 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Users, Target, Award, Globe, Lightbulb, TrendingUp, Heart, CheckCircle, ArrowRight, Mail, Linkedin } from "lucide-react";
 
+// Generate avatar URLs for team members using local avatar files
+const getAvatarUrl = (name: string, index: number) => {
+  const avatarFiles = [
+    '/avatars/wenxin.svg',           // 温馨 (Wenxin)
+    '/avatars/Li Ming.svg',          // 李明 (Li Ming)
+    '/avatars/Zhang Yu.svg',         // 张雨晴 (Zhang Yuqing)  
+    '/avatars/王浩然.svg',            // 王浩然 (Wang Haoran)
+    '/avatars/Chen Siya.svg',        // 陈思雅 (Chen Siya)
+    '/avatars/Liu Jianguo.svg'       // 刘建国 (Liu Jianguo)
+  ];
+  
+  return avatarFiles[index] || '/avatars/wenxin.svg';
+};
+
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-900">
@@ -184,7 +198,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                name: "Dr. Sarah Chen",
+                name: "温馨 (Wenxin)",
                 role: "Founder & CEO",
                 expertise: "Solar Technology & Market Strategy",
                 bio: "15+ years leading renewable energy projects and policy development",
@@ -192,15 +206,15 @@ export default function AboutPage() {
                 linkedin: "#"
               },
               {
-                name: "Michael Rodriguez",
+                name: "李明 (Li Ming)",
                 role: "Energy Storage Director",
                 expertise: "Battery Technology & Grid Integration",
-                bio: "Former Tesla energy systems engineer with deep storage expertise",
+                bio: "Former energy systems engineer with deep storage expertise",
                 image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&auto=format",
                 linkedin: "#"
               },
               {
-                name: "Dr. Emma Thompson",
+                name: "张雨晴 (Zhang Yuqing)",
                 role: "Wind Energy Lead",
                 expertise: "Offshore Wind & Technology Innovation",
                 bio: "Marine engineering background with 12+ years in offshore wind",
@@ -208,7 +222,7 @@ export default function AboutPage() {
                 linkedin: "#"
               },
               {
-                name: "Dr. James Liu",
+                name: "王浩然 (Wang Haoran)",
                 role: "Hydrogen Specialist",
                 expertise: "Green Hydrogen & Industrial Applications",
                 bio: "Chemical engineering PhD focused on hydrogen production and applications",
@@ -216,15 +230,15 @@ export default function AboutPage() {
                 linkedin: "#"
               },
               {
-                name: "Lisa Wang",
+                name: "陈思雅 (Chen Siya)",
                 role: "Policy Research Manager",
                 expertise: "Energy Policy & Regulatory Analysis",
-                bio: "Former DOE policy analyst with expertise in clean energy regulations",
+                bio: "Former energy policy analyst with expertise in clean energy regulations",
                 image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop&auto=format",
                 linkedin: "#"
               },
               {
-                name: "Dr. Robert Kim",
+                name: "刘建国 (Liu Jianguo)",
                 role: "Market Research Lead",
                 expertise: "Market Analysis & Investment Strategy",
                 bio: "Financial modeling expert with focus on clean energy investments",
@@ -239,11 +253,14 @@ export default function AboutPage() {
                 transition={{ delay: index * 0.1 }}
                 className="bg-neutral-50 dark:bg-neutral-800 rounded-xl overflow-hidden"
               >
-                <div className="relative h-64">
-                  <div className="w-full h-full bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center">
-                    <span className="text-4xl font-bold text-white">
-                      {member.name.split(' ').map(n => n[0]).join('')}
-                    </span>
+                <div className="relative h-56 flex items-center justify-center bg-gray-50 dark:bg-gray-800 p-4">
+                  <div className="relative w-40 h-40">
+                    <Image
+                      src={getAvatarUrl(member.name, index)}
+                      alt={`${member.name} avatar`}
+                      fill
+                      className="object-contain"
+                    />
                   </div>
                 </div>
                 <div className="p-6">
