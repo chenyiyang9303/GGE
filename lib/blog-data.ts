@@ -346,7 +346,7 @@ By 2040, green hydrogen could become a $1+ trillion global market, fundamentally
     author: {
       name: "刘建国 (Liu Jianguo)",
       title: "Hydrogen Economy Research Lead",
-      avatar: "/avatars/Liu Jianguo.jpg",
+      avatar: "/avatars/Liu Jianguo.svg",
       bio: "Dr. Kim leads research on hydrogen technologies and markets, with expertise in electrolyzer systems and industrial applications."
     },
     tags: ["Green Hydrogen", "Electrolyzer", "Infrastructure", "Scaling", "Industrial Decarbonization"],
