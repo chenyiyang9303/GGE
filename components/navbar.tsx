@@ -126,7 +126,7 @@ const DesktopNav = ({ navItems, visible }: NavbarProps) => {
           data-cal-namespace={calConfig.namespace}
           data-cal-link={calConfig.link}
           data-cal-config={`{"layout":"${calConfig.layout}"}`}
-          className="hidden md:block px-4 py-2 rounded-md bg-gradient-to-b from-blue-500 to-blue-700 text-white shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset] hover:-translate-y-0.5 transition duration-200 font-semibold text-sm cursor-pointer"
+          className="hidden md:block px-6 py-2.5 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-xl transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 text-sm cursor-pointer"
         >
           Book Free Call
         </button>
@@ -208,7 +208,7 @@ const MobileNav = ({ navItems, visible }: NavbarProps) => {
                 data-cal-link={calConfig.link}
                 data-cal-config={`{"layout":"${calConfig.layout}"}`}
                 onClick={() => setOpen(false)}
-                className="block md:hidden w-full px-4 py-2 rounded-md bg-gradient-to-b from-blue-500 to-blue-700 text-white shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset] hover:-translate-y-0.5 transition duration-200 font-semibold text-sm cursor-pointer"
+                className="block md:hidden w-full px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-xl transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 text-sm cursor-pointer"
               >
                 Book Free Call
               </button>
