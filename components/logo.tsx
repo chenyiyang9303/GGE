@@ -15,8 +15,8 @@ export const Logo = () => {
         height={40}
         className="md:w-[50px] md:h-[50px]"
       />
-      <span className="font-medium text-black dark:text-white text-sm md:text-base whitespace-nowrap">
-        Omven Strategy
+      <span className="font-bold text-black dark:text-white text-base md:text-lg whitespace-nowrap">
+        GGE
       </span>
     </Link>
   );

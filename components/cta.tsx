@@ -9,57 +9,64 @@ export function CTAWithDashedGridLines() {
   const calConfig = useCalEmbed();
 
   return (
-    <section className="w-full grid grid-cols-1 md:grid-cols-3 my-20 md:my-40 justify-start relative z-20 max-w-7xl mx-auto bg-gradient-to-br from-gray-100 to-white dark:from-neutral-900 dark:to-neutral-950">
+    <div className="w-full bg-white dark:bg-gray-900 py-24 px-4 md:px-8">
+      <section className="w-full grid grid-cols-1 md:grid-cols-3 justify-start relative z-20 max-w-7xl mx-auto bg-gray-50 dark:bg-gray-800 rounded-3xl shadow-xl border border-gray-200/50 dark:border-gray-700/50">
       <GridLineHorizontal className="top-0" offset="200px" />
       <GridLineHorizontal className="bottom-0 top-auto" offset="200px" />
       <GridLineVertical className="left-0" offset="80px" />
       <GridLineVertical className="left-auto right-0" offset="80px" />
-      <div className="md:col-span-2 p-8 md:p-14">
-        <h2 className="text-left text-neutral-500 dark:text-neutral-200 text-xl md:text-3xl tracking-tight font-medium">
-          Turn your clean energy vision into{" "}
-          <span className="font-bold text-black dark:text-white">
-            market reality
+      <div className="md:col-span-2 p-10 md:p-16">
+        <h2 className="text-left text-accent-600 dark:text-accent-300 text-2xl md:text-4xl font-display font-medium leading-tight">
+          Ready to unlock your{" "}
+          <span className="font-bold text-accent-900 dark:text-white">
+            $10B market opportunity?
           </span>
         </h2>
-        <p className="text-left text-neutral-500 mt-4 max-w-lg dark:text-neutral-200 text-xl md:text-3xl tracking-tight font-medium">
-          Get professional <span className="text-blue-700">market consulting</span>{" "}
-          from concept to{" "}
-          <span className="text-indigo-700">commercial success</span>.
+        <p className="text-left text-accent-600 dark:text-accent-300 mt-6 max-w-lg text-lg md:text-xl font-medium leading-relaxed">
+          Join 200+ clean energy leaders who've achieved{" "}
+          <span className="text-primary-600 dark:text-primary-400 font-semibold">3x faster growth</span> with our{" "}
+          <span className="text-primary-600 dark:text-primary-400 font-semibold">proven strategies</span>.
         </p>
 
-        <div className="flex items-start sm:items-center flex-col sm:flex-row sm:gap-4">
+        <div className="flex items-start sm:items-center flex-col sm:flex-row gap-4 mt-10">
           <button 
             data-cal-namespace={calConfig.namespace}
             data-cal-link={calConfig.link}
             data-cal-config={`{"layout":"${calConfig.layout}"}`}
-            className="mt-8 flex space-x-2 items-center group text-base px-6 py-3 rounded-md bg-gradient-to-b from-blue-500 to-blue-700 text-white shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset] hover:-translate-y-0.5 transition duration-200 cursor-pointer font-semibold"
+            className="group flex items-center justify-center px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-xl transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 min-w-[220px]"
           >
-            <span>Free Consultation</span>
-            <HiArrowRight className="text-white group-hover:translate-x-1 stroke-[1px] h-3 w-3 mt-0.5 transition-transform duration-200" />
+            <span>Get Strategic Assessment</span>
+            <HiArrowRight className="ml-2 text-white group-hover:translate-x-1 h-4 w-4 transition-transform duration-200" />
           </button>
           <button 
             onClick={() => window.location.href = '/#case-studies'}
-            className="mt-8 flex space-x-2 items-center group text-base px-6 py-3 rounded-md bg-transparent text-black dark:text-white border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 hover:-translate-y-0.5 transition duration-200 cursor-pointer font-bold"
+            className="group flex items-center justify-center px-8 py-4 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 text-gray-900 dark:text-white font-semibold rounded-xl transition-all duration-200 hover:shadow-md hover:-translate-y-0.5 min-w-[220px]"
           >
-            <span>View Success Stories</span>
-            <IconMessageCircleQuestion className="text-black dark:text-white group-hover:translate-x-1 stroke-[1px] h-3 w-3 mt-0.5 transition-transform duration-200" />
+            <span>See $5B in Results</span>
+            <IconMessageCircleQuestion className="ml-2 group-hover:translate-x-1 h-4 w-4 transition-transform duration-200" />
           </button>
         </div>
       </div>
-      <div className="border-t md:border-t-0 md:border-l border-dashed p-8 md:p-14">
-        <p className="text-base text-neutral-700 dark:text-neutral-200">
-          &quot;Their professional market analysis and strategic guidance helped us successfully break into international markets. Overseas revenue grew from 5% to 45%, and we're now a global distributed solar solutions provider.&quot;
+      <div className="border-t md:border-t-0 md:border-l border-accent-200 dark:border-accent-700 border-dashed p-10 md:p-16">
+        <div className="mb-6">
+          <svg className="w-8 h-8 text-primary-500" fill="currentColor" viewBox="0 0 32 32">
+            <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z"/>
+          </svg>
+        </div>
+        <p className="text-lg text-accent-700 dark:text-accent-200 leading-relaxed font-medium">
+          &quot;Their strategic consulting transformed our business completely. We went from $48M to $131M in revenue within 18 months, expanded to 25 countries, and became a market leader in distributed solar.&quot;
         </p>
-        <div className="flex flex-col text-sm items-start mt-4 gap-1">
-          <p className="font-bold text-neutral-800 dark:text-neutral-200">
-            Michael Chen
+        <div className="flex flex-col text-sm items-start mt-6 gap-1">
+          <p className="font-bold text-accent-900 dark:text-white">
+            Sarah Zhang
           </p>
-          <p className="text-neutral-500 dark:text-neutral-400">
-            Chairman, SolarTech Energy
+          <p className="text-accent-500 dark:text-accent-400">
+            CEO, SolarTech Energy
           </p>
         </div>
       </div>
-    </section>
+      </section>
+    </div>
   );
 }
 

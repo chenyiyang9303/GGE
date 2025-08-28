@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Startup consulting company website targeting seed-stage founders. Built with Next.js 14 App Router, featuring Cal.com booking integration and Framer Motion animations. Core business model: B2B consulting services for pre-Series A companies.
+Clean energy consulting company website targeting solar, wind, storage, and hydrogen companies. Built with Next.js 14 App Router, featuring Cal.com booking integration and WebGL 3D effects. Core business model: B2B consulting for technology breakthroughs, market expansion, and sustainable growth.
 
 ## Architecture & Tech Stack
 
@@ -15,9 +15,10 @@ Startup consulting company website targeting seed-stage founders. Built with Nex
 
 **Key Dependencies**:
 - `@calcom/embed-react` - Booking system integration
-- `cobe` - 3D globe visualization  
-- `dotted-map` - World map components
-- `next-themes` - Dark/light mode theming
+- `ogl` - WebGL library for 3D Prism effects
+- `cobe` - 3D globe visualization (legacy)
+- `dotted-map` - World map components (legacy)
+- `next-themes` - Dark/light mode theming (defaults to dark)
 - `next-view-transitions` - Page transitions
 
 ## Essential Commands
@@ -36,92 +37,96 @@ npm run lint         # ESLint + Next.js linting
 
 ## Critical Architecture Patterns
 
+**Theme System**:
+- `app/layout.tsx` - ThemeProvider configuration with `defaultTheme="dark"`
+- Dark mode optimized for WebGL 3D effects visibility
+- User can toggle via `components/mode-toggle.tsx`
+
 **Context Architecture**:
 - `context/providers.tsx` - Root providers wrapper
-- `context/cal-provider.tsx` - Cal.com embed context
 - Theme management via next-themes
 
 **Component Organization**:
 - Page components in `app/` (App Router)
 - Reusable UI in `components/ui/`
 - Business components in `components/`
+- WebGL components in `components/Prism/`
 - Utilities in `lib/utils.ts`
+- Constants in `constants/links.ts`
 
 **State Management**:
-- React Context for Cal.com integration
-- No global state management (consider Zustand if complexity grows)
+- React Context for Cal.com integration via `app/hooks/useCalEmbed.ts`
+- No global state management
 
 ## Cal.com Integration Architecture
 
-**Booking Flow**:
-- Namespace: `startup-consulting`
-- Consultation link: `startup-consulting/free-consultation`
-- Hook: `app/hooks/useCalEmbed.ts` for embed management
-- Context: `context/cal-provider.tsx` for global state
+**Current Configuration** (in `constants/links.ts`):
+- Namespace: `"chat-with-manu-demo"`
+- Link: `"manu-arora-vesr9s/chat-with-manu-demo"`
+- Brand color: `#3b82f6` (blue-500)
+- Layout: `"month_view"`
 
-**Critical Implementation Details**:
-- Cal.com scripts load asynchronously via useCalEmbed hook
-- Brand color: `#3b82f6` (must match Tailwind blue-500)
-- Embed container requires specific CSS classes for responsive behavior
+**Hook Implementation**:
+- `app/hooks/useCalEmbed.ts` - Manages Cal.com embed initialization
+- Global flag prevents duplicate initialization
+- Async loading with error handling
+- Console logging for debugging
 
-## Animation System
+**Integration Points**:
+- Hero CTA button uses data attributes for Cal.com embed
+- Script loaded in `app/layout.tsx` head section
 
-**Performance Considerations**:
-- Framer Motion + motion library (potential bundle size issue)
-- 3D globe (cobe) is GPU-intensive on mobile
-- Staggered animations can block main thread
+## 3D Effects System
 
-**Key Animation Components**:
-- Hero beam animations with collision detection
-- World map with dotted visualization
-- Page transitions via next-view-transitions
+**Prism Component** (`components/Prism/Prism.tsx`):
+- WebGL-based 3D pyramidal prism effect
+- Uses OGL library for performance
+- Animation types: `"rotate"`, `"hover"`, `"3drotate"`
+- Configurable parameters: scale, height, baseWidth, glow, hueShift, etc.
+- Performance optimized with `suspendWhenOffscreen`
+
+**Current Hero Configuration**:
+- Animation: `"3drotate"` (continuous 3D rotation)
+- Scale: `2.9`, Height: `3.5`, Base Width: `4.8`
+- Color effects: `hueShift={0.16}`, `colorFrequency={1.7}`
+- Performance: `suspendWhenOffscreen={true}`
+
+## Content Architecture
+
+**Dynamic Content Data**:
+- Blog posts: `lib/blog-data.ts`
+- Case studies: `lib/case-studies-data.ts`
+- Reports: `lib/reports-data.ts`
+
+**Page Structure**:
+- Dynamic routes: `app/blog/[slug]/`, `app/case-studies/[slug]/`, `app/reports/[id]/`
+- Static pages: about, contact, privacy, terms, cookies, login
+- Content components: services, pricing, testimonials, features
 
 ## Development Gotchas
 
-**Naming Issues** (needs fixing):
-- `contact sections.tsx` has space in filename (should be `contact-sections.tsx`)
-- Inconsistent naming between kebab-case and camelCase
+**File Naming Issues**:
+- `contact sections.tsx` has space in filename (inconsistent with kebab-case pattern)
+- Most components use camelCase, some use kebab-case
 
-**TypeScript Configuration**:
-- Strict mode enabled in tsconfig.json
-- All components should have proper type definitions
-- Cal.com embed types may need manual declaration
+**WebGL Performance**:
+- Prism component is GPU-intensive
+- Dark mode default ensures better visibility of 3D effects
+- Use `suspendWhenOffscreen` for performance optimization
 
 **Build Process**:
-- Next.js 14 requires Node.js 18.17+
-- Static optimization works for most pages
-- Cal.com embed prevents full static generation
+- Static export configured (generates `/out` directory)
+- Cal.com embed prevents full static optimization
+- TypeScript strict mode enabled
 
-## Content Management
+## Tailwind Configuration
 
-**Dynamic Content Locations**:
-- Service offerings: `components/services.tsx`
-- Case studies: `components/case-studies.tsx` 
-- Pricing tiers: `components/pricing.tsx`
-- Testimonials: `components/cta.tsx`
-- Legal pages: `app/privacy/`, `app/terms/`, `app/cookies/`
+**Custom Extensions**:
+- Custom box shadows: `derek`, `input`
+- Color variables plugin generates CSS custom properties
+- Dark mode class-based strategy
+- Custom gradient backgrounds
 
-**SEO Configuration**:
-- Metadata in `app/layout.tsx` (currently basic)
-- No structured data implementation
-- Missing sitemap.xml and robots.txt optimization
-
-## Performance & Deployment
-
-**Known Performance Issues**:
-- Heavy animation libraries impact bundle size
-- 3D globe component not optimized for mobile
-- No image optimization strategy implemented
-
-**Deployment Requirements**:
-- Vercel deployment ready (Next.js optimized)
-- Environment variables needed for Cal.com integration
-- Static assets served from `/public/`
-
-## Code Quality Improvements Needed
-
-1. **Fix naming consistency** (`contact sections.tsx` → `contact-sections.tsx`)
-2. **Add TypeScript strict checks** for all components
-3. **Implement error boundaries** for Cal.com embed failures
-4. **Add performance monitoring** (consider Vercel Analytics)
-5. **Setup testing framework** (Jest + Testing Library recommended)
+**Important Classes**:
+- Use `dark:` prefixes extensively due to dark mode default
+- Custom shadow utilities for consistent design system

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Omven LLC",
-  description: "Read Omven LLC's terms of service to understand the conditions for using our consulting services and website.",
+  title: "Terms of Service | Green Giant Energy Texas Inc",
+  description: "Read Green Giant Energy Texas Inc's terms of service to understand the conditions for using our consulting services and website.",
 };
 
 export default function TermsOfService() {
@@ -24,7 +24,7 @@ export default function TermsOfService() {
               Agreement to Terms
             </h2>
             <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed">
-              These Terms of Service ("Terms") govern your use of Omven LLC's ("Omven", "we", "us", "our") website and consulting services. By accessing or using our services, you agree to be bound by these Terms. If you disagree with any part of these terms, then you may not access our services.
+              These Terms of Service ("Terms") govern your use of Green Giant Energy Texas Inc's ("Omven", "we", "us", "our") website and consulting services. By accessing or using our services, you agree to be bound by these Terms. If you disagree with any part of these terms, then you may not access our services.
             </p>
           </section>
 
@@ -127,7 +127,7 @@ export default function TermsOfService() {
               Limitation of Liability
             </h3>
             <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
-              In no event shall Omven LLC be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your use of our services.
+              In no event shall Green Giant Energy Texas Inc be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your use of our services.
             </p>
             <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed">
               Our total liability to you for any claim arising out of or relating to these Terms or our services shall not exceed the amount paid by you to us for the specific service giving rise to the claim during the twelve (12) months preceding the claim.
@@ -176,7 +176,7 @@ export default function TermsOfService() {
             </p>
             <div className="bg-neutral-50 dark:bg-neutral-900 p-6 rounded-lg">
               <div className="text-neutral-800 dark:text-neutral-200">
-                <p className="font-bold text-lg mb-2">Omven LLC</p>
+                <p className="font-bold text-lg mb-2">Green Giant Energy Texas Inc</p>
                 <p>41 University Drive, Suite 202</p>
                 <p>Newtown, PA 18940</p>
                 <p className="mt-2">P: +1-267-759-9000</p>

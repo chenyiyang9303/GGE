@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Omven LLC",
-  description: "Learn how Omven LLC collects, uses, and protects your personal information. Our comprehensive privacy policy outlines our commitment to your data protection.",
+  title: "Privacy Policy | Green Giant Energy Texas Inc",
+  description: "Learn how Green Giant Energy Texas Inc collects, uses, and protects your personal information. Our comprehensive privacy policy outlines our commitment to your data protection.",
 };
 
 export default function PrivacyPolicy() {
@@ -20,7 +20,7 @@ export default function PrivacyPolicy() {
 
         <div className="prose prose-lg prose-neutral dark:prose-invert max-w-none">
           <p className="text-lg leading-relaxed mb-8">
-            Omven LLC, together with its subsidiaries ("Omven"), has created this Privacy Policy in line with Omven's commitment to your privacy on Omven websites and marketing initiatives. The following discloses Omven's information gathering, dissemination, and protection practices.
+            Green Giant Energy Texas Inc, together with its subsidiaries ("Omven"), has created this Privacy Policy in line with Omven's commitment to your privacy on Omven websites and marketing initiatives. The following discloses Omven's information gathering, dissemination, and protection practices.
           </p>
 
           <section className="mb-8">
@@ -40,7 +40,7 @@ export default function PrivacyPolicy() {
               Omven collects information to provide better services to its users and to better understand visitors to its websites and their interests. Omven collects information in the following ways:
             </p>
             <ul className="list-disc pl-6 space-y-2 text-neutral-700 dark:text-neutral-300">
-              <li>Information you actively choose to submit to us (such as your name, email address, company name, title, country) for the purpose of accessing various downloads, viewing specific content, subscribing to Omven Strategy newsletters, registering for events, and your preferences in receiving marketing from Omven and its third-party partners, as well as your communication preferences. Information we have obtained about you from publicly available sources such as social media, marketing platforms, or events you attended. You will receive marketing communications from Omven if you have requested information from Omven or you or your employer has purchased services from Omven;</li>
+              <li>Information you actively choose to submit to us (such as your name, email address, company name, title, country) for the purpose of accessing various downloads, viewing specific content, subscribing to GGE newsletters, registering for events, and your preferences in receiving marketing from Omven and its third-party partners, as well as your communication preferences. Information we have obtained about you from publicly available sources such as social media, marketing platforms, or events you attended. You will receive marketing communications from Omven if you have requested information from Omven or you or your employer has purchased services from Omven;</li>
               <li>Information Omven receives from your use of Omven websites, such as IP address, browser type, ISP, referring/exit pages, platform type, date/time stamp, number of clicks, domain name, and country/state of all visitors to Omven's websites;</li>
               <li>Location information when you use Omven websites, as Omven may collect and process information about your location. Omven uses various technologies and tools to determine location;</li>
               <li>Information considered aggregated data, such as statistical or demographic data, which Omven may use for any purpose. Aggregated data may be derived from your personal information but is not considered personal information in law as it does not directly or indirectly reveal your identity, unless Omven combines or connects aggregated data with your personal information so that it can directly or indirectly identify you;</li>
@@ -94,7 +94,7 @@ export default function PrivacyPolicy() {
               Use of Information
             </h2>
             <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
-              Any information collected by Omven will be done in accordance with this Privacy Policy for the purposes of making better business decisions, supporting the activities you choose to engage in, and providing higher quality solutions and services to Omven Strategy customers. Omven uses your location information to tailor your experience with Omven websites. It may also use any non-personal information collected to enhance Omven websites, and your IP address for website diagnostics and administration. Omven will only retain your personal information for as long as necessary to fulfill the purposes it was collected for, including for the purposes of satisfying any legal, accounting, or reporting requirements.
+              Any information collected by Omven will be done in accordance with this Privacy Policy for the purposes of making better business decisions, supporting the activities you choose to engage in, and providing higher quality solutions and services to GGE customers. Omven uses your location information to tailor your experience with Omven websites. It may also use any non-personal information collected to enhance Omven websites, and your IP address for website diagnostics and administration. Omven will only retain your personal information for as long as necessary to fulfill the purposes it was collected for, including for the purposes of satisfying any legal, accounting, or reporting requirements.
             </p>
             <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed">
               To determine the appropriate retention period for personal information, Omven considers the amount, nature, and sensitivity of the personal information, the potential risk of harm from unauthorized use or disclosure of your personal information, the purposes for which Omven processes your personal information and whether it can achieve those purposes through other means, and the applicable legal requirements.
@@ -124,7 +124,7 @@ export default function PrivacyPolicy() {
               Marketing
             </h2>
             <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed">
-              As explained above, Omven will collect and use your personal data for marketing purposes. Your data will be stored in our CRM system. We will use your data to inform you about Omven Strategy products and services we think may be of interest to you and send you our newsletters. For statistical purposes, we will collect information about your response to our emails and our interaction with you to make decisions on future marketing. If you wish to stop our collection and use of this information, please contact privacy@omven.com.
+              As explained above, Omven will collect and use your personal data for marketing purposes. Your data will be stored in our CRM system. We will use your data to inform you about GGE products and services we think may be of interest to you and send you our newsletters. For statistical purposes, we will collect information about your response to our emails and our interaction with you to make decisions on future marketing. If you wish to stop our collection and use of this information, please contact privacy@omven.com.
             </p>
           </section>
 
@@ -187,7 +187,7 @@ export default function PrivacyPolicy() {
             </p>
             <div className="bg-neutral-50 dark:bg-neutral-900 p-6 rounded-lg">
               <div className="text-neutral-800 dark:text-neutral-200">
-                <p className="font-bold text-lg mb-2">Omven LLC</p>
+                <p className="font-bold text-lg mb-2">Green Giant Energy Texas Inc</p>
                 <p>41 University Drive, Suite 202</p>
                 <p>Newtown, PA 18940</p>
                 <p className="mt-2">P: +1-267-759-9000</p>

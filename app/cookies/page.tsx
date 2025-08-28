@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Cookie Policy | Omven LLC",
-  description: "Learn about how Omven LLC uses cookies and similar technologies on our website to improve your browsing experience.",
+  title: "Cookie Policy | Green Giant Energy Texas Inc",
+  description: "Learn about how Green Giant Energy Texas Inc uses cookies and similar technologies on our website to improve your browsing experience.",
 };
 
 export default function CookiePolicy() {
@@ -215,7 +215,7 @@ export default function CookiePolicy() {
             </p>
             <div className="bg-neutral-50 dark:bg-neutral-900 p-6 rounded-lg">
               <div className="text-neutral-800 dark:text-neutral-200">
-                <p className="font-bold text-lg mb-2">Omven LLC</p>
+                <p className="font-bold text-lg mb-2">Green Giant Energy Texas Inc</p>
                 <p>41 University Drive, Suite 202</p>
                 <p>Newtown, PA 18940</p>
                 <p className="mt-2">P: +1-267-759-9000</p>

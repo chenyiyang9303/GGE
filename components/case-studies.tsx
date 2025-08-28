@@ -1,46 +1,119 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import React from "react";
+import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Users, DollarSign, TrendingUp } from "lucide-react";
+import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { getAllCaseStudies } from "@/lib/case-studies-data";
 
 export function CaseStudies() {
   const caseStudies = getAllCaseStudies();
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+
+  const checkScrollability = () => {
+    if (scrollRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+      setCanScrollLeft(scrollLeft > 0);
+      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
+    }
+  };
+
+  const scrollLeft = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: -400, behavior: 'smooth' });
+      setTimeout(checkScrollability, 300);
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: 400, behavior: 'smooth' });
+      setTimeout(checkScrollability, 300);
+    }
+  };
+
+  React.useEffect(() => {
+    checkScrollability();
+    const handleResize = () => checkScrollability();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <div
       id="case-studies"
-      className="w-full mx-auto bg-neutral-50 dark:bg-neutral-900 py-20 px-4 md:px-8"
+      className="w-full mx-auto bg-gray-50 dark:bg-gray-800 py-24 px-4 md:px-8"
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="font-sans text-3xl md:text-4xl font-bold tracking-tight text-neutral-800 dark:text-neutral-100 mb-4">
-            Success Stories
+          <h2 className="font-display text-display-md md:text-display-lg font-bold text-accent-900 dark:text-white mb-4">
+            $5B+ in Client Value Created
           </h2>
-          <p className="text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
-            Discover how we help clean energy companies achieve market breakthroughs, 
-            technology upgrades, and business growth in the competitive renewable energy sector.
+          <p className="text-lg text-accent-600 dark:text-accent-300 max-w-3xl mx-auto">
+            Real results from real companies. See how our strategic consulting has delivered transformational growth, market leadership, and breakthrough innovations for clean energy leaders worldwide.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {caseStudies.map((caseStudy) => (
-            <CaseStudyCard
-              key={caseStudy.slug}
-              slug={caseStudy.slug}
-              company={caseStudy.company}
-              industry={caseStudy.industry}
-              challenge={caseStudy.challenge}
-              solution={caseStudy.solution}
-              results={caseStudy.results}
-              timeline={caseStudy.timeline}
-              image={caseStudy.image}
-            />
-          ))}
+        {/* Carousel Container */}
+        <div className="relative">
+          {/* Navigation Buttons */}
+          <button
+            onClick={scrollLeft}
+            disabled={!canScrollLeft}
+            className={cn(
+              "absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white dark:bg-accent-800 shadow-lg border border-accent-200 dark:border-accent-700 flex items-center justify-center transition-all duration-200",
+              canScrollLeft 
+                ? "hover:bg-accent-50 dark:hover:bg-accent-700 text-accent-900 dark:text-white cursor-pointer" 
+                : "opacity-50 cursor-not-allowed text-accent-400"
+            )}
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+
+          <button
+            onClick={scrollRight}
+            disabled={!canScrollRight}
+            className={cn(
+              "absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white dark:bg-accent-800 shadow-lg border border-accent-200 dark:border-accent-700 flex items-center justify-center transition-all duration-200",
+              canScrollRight 
+                ? "hover:bg-accent-50 dark:hover:bg-accent-700 text-accent-900 dark:text-white cursor-pointer" 
+                : "opacity-50 cursor-not-allowed text-accent-400"
+            )}
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
+
+          {/* Scrollable Cards Container */}
+          <div
+            ref={scrollRef}
+            className="flex gap-6 overflow-x-auto scrollbar-hide pb-4 px-4"
+            style={{ scrollSnapType: 'x-mandatory' }}
+            onScroll={checkScrollability}
+          >
+            {caseStudies.map((caseStudy, index) => (
+              <div 
+                key={caseStudy.slug} 
+                className="flex-shrink-0 w-80 md:w-96" 
+                style={{ scrollSnapAlign: 'start' }}
+              >
+                <CaseStudyCard
+                  slug={caseStudy.slug}
+                  company={caseStudy.company}
+                  industry={caseStudy.industry}
+                  challenge={caseStudy.challenge}
+                  solution={caseStudy.solution}
+                  results={caseStudy.results}
+                  timeline={caseStudy.timeline}
+                  image={caseStudy.image}
+                  index={index}
+                />
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="text-center mt-16">
@@ -48,10 +121,10 @@ export function CaseStudies() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-medium hover:gap-3 transition-all duration-200 cursor-pointer"
+            className="inline-flex items-center gap-2 text-primary-600 dark:text-primary-400 font-semibold hover:gap-3 transition-all duration-200 cursor-pointer text-lg"
           >
-            View More Case Studies
-            <ArrowUpRight className="h-4 w-4" />
+            Explore All Success Stories
+            <ArrowUpRight className="h-5 w-5" />
           </motion.div>
         </div>
       </div>
@@ -68,6 +141,7 @@ const CaseStudyCard = ({
   results,
   timeline,
   image,
+  index,
 }: {
   slug: string;
   company: string;
@@ -77,12 +151,15 @@ const CaseStudyCard = ({
   results: { metric: string; value: string }[];
   timeline: string;
   image: string;
+  index: number;
 }) => {
   return (
     <motion.div
-      whileHover={{ y: -5 }}
-      transition={{ duration: 0.3 }}
-      className="group bg-white dark:bg-neutral-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      whileHover={{ y: -8, scale: 1.02 }}
+      className="group bg-white dark:bg-accent-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-accent-100 dark:border-accent-700/50 hover:border-primary-200 dark:hover:border-primary-600 h-full"
     >
       <Link href={`/case-studies/${slug}`}>
         <div className="relative h-48 overflow-hidden">
@@ -101,46 +178,46 @@ const CaseStudyCard = ({
 
         <div className="p-6">
           <div className="mb-4">
-            <h4 className="font-semibold text-neutral-800 dark:text-neutral-100 mb-2">
+            <h4 className="font-semibold text-accent-900 dark:text-white mb-2 text-sm uppercase tracking-wide">
               Challenge
             </h4>
-            <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+            <p className="text-sm text-accent-600 dark:text-accent-300 leading-relaxed">
               {challenge}
             </p>
           </div>
 
           <div className="mb-6">
-            <h4 className="font-semibold text-neutral-800 dark:text-neutral-100 mb-2">
-              Solution
+            <h4 className="font-semibold text-accent-900 dark:text-white mb-2 text-sm uppercase tracking-wide">
+              Results
             </h4>
-            <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+            <p className="text-sm text-accent-600 dark:text-accent-300 leading-relaxed">
               {solution}
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-3 mb-4">
-            {results.map((result, index) => (
-              <div key={index} className="flex justify-between items-center py-2 border-b border-neutral-100 dark:border-neutral-700 last:border-b-0">
-                <span className="text-sm text-neutral-600 dark:text-neutral-400">
+          <div className="grid grid-cols-1 gap-2 mb-6">
+            {results.slice(0, 3).map((result, idx) => (
+              <div key={idx} className="flex justify-between items-center py-2 px-3 bg-accent-50 dark:bg-accent-700/30 rounded-lg">
+                <span className="text-xs text-accent-600 dark:text-accent-400 font-medium">
                   {result.metric}
                 </span>
-                <span className="font-semibold text-neutral-800 dark:text-neutral-100">
+                <span className="font-bold text-accent-900 dark:text-white text-sm">
                   {result.value}
                 </span>
               </div>
             ))}
           </div>
 
-          <div className="flex items-center justify-between text-sm">
-            <span className="text-neutral-500 dark:text-neutral-400">
-              Timeline: {timeline}
+          <div className="flex items-center justify-between text-sm mt-auto">
+            <span className="text-accent-500 dark:text-accent-400 font-medium">
+              {timeline}
             </span>
             <motion.div
-              whileHover={{ x: 3 }}
-              className="flex items-center gap-1 text-blue-600 dark:text-blue-400 font-medium cursor-pointer"
+              whileHover={{ x: 2 }}
+              className="flex items-center gap-1 text-primary-600 dark:text-primary-400 font-semibold cursor-pointer"
             >
-              View Case Study
-              <ArrowUpRight className="h-3 w-3" />
+              View Details
+              <ArrowUpRight className="h-4 w-4" />
             </motion.div>
           </div>
         </div>
