@@ -11,13 +11,10 @@ export const Logo = () => {
       <Image
         src="/logo.png"
         alt="logo"
-        width={40}
-        height={40}
-        className="md:w-[50px] md:h-[50px]"
+        width={150}
+        height={75}
+        className="h-6 w-auto md:h-8 dark:invert dark:brightness-200"
       />
-      <span className="font-bold text-black dark:text-white text-base md:text-lg whitespace-nowrap">
-        GGE
-      </span>
     </Link>
   );
 };
