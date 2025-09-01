@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import { marked } from "marked";
 import { ArrowLeft, Calendar, Clock, User, Share2, Tag, Eye, BookOpen } from "lucide-react";
 import { getBlogPostBySlug, getAllBlogPosts, getRelatedBlogPosts, blogCategories } from "@/lib/blog-data";
 import { formatDate } from "@/lib/utils";
@@ -26,6 +27,12 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   const relatedPosts = getRelatedBlogPosts(params.slug);
+
+  // Configure marked for better HTML output
+  marked.setOptions({
+    gfm: true,
+    breaks: true,
+  });
 
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-900">
@@ -117,14 +124,15 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           <div className="lg:col-span-3">
             <article className="prose prose-lg dark:prose-invert max-w-none">
               <div 
-                className="text-neutral-700 dark:text-neutral-300 leading-relaxed"
+                className="text-neutral-700 dark:text-neutral-200 leading-relaxed
+                  [&>h1]:text-3xl [&>h1]:font-bold [&>h1]:mt-8 [&>h1]:mb-4 [&>h1]:text-neutral-900 [&>h1]:dark:text-white
+                  [&>h2]:text-2xl [&>h2]:font-bold [&>h2]:mt-8 [&>h2]:mb-4 [&>h2]:text-neutral-900 [&>h2]:dark:text-white  
+                  [&>h3]:text-xl [&>h3]:font-bold [&>h3]:mt-6 [&>h3]:mb-3 [&>h3]:text-neutral-900 [&>h3]:dark:text-white
+                  [&>p]:mb-6 [&>p]:text-neutral-700 [&>p]:dark:text-neutral-200 [&>p]:leading-relaxed
+                  [&>strong]:font-semibold [&>strong]:text-neutral-900 [&>strong]:dark:text-neutral-100
+                  [&>code]:bg-neutral-100 [&>code]:dark:bg-neutral-800 [&>code]:px-2 [&>code]:py-1 [&>code]:rounded [&>code]:text-sm [&>code]:text-neutral-800 [&>code]:dark:text-neutral-200"
                 dangerouslySetInnerHTML={{ 
-                  __html: post.content.replace(/\n/g, '<br />').replace(/#{1,6}\s/g, (match) => {
-                    const level = match.trim().length;
-                    return `<h${level} class="text-${4-level}xl font-bold text-neutral-800 dark:text-neutral-100 mt-8 mb-4">`;
-                  }).replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold text-neutral-800 dark:text-neutral-100">$1</strong>')
-                    .replace(/\*(.*?)\*/g, '<em class="italic">$1</em>')
-                    .replace(/`(.*?)`/g, '<code class="bg-neutral-100 dark:bg-neutral-800 px-2 py-1 rounded text-sm">$1</code>')
+                  __html: marked(post.content) 
                 }}
               />
             </article>

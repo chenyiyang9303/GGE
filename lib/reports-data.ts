@@ -33,7 +33,7 @@ const reports: Report[] = [
     id: "global-solar-market-2024",
     title: "Global Solar Market Outlook 2024-2030",
     subtitle: "Comprehensive Analysis of Photovoltaic Industry Growth and Investment Opportunities",
-    description: "An in-depth analysis of the global solar photovoltaic market, covering technology trends, regional developments, policy impacts, and investment opportunities through 2030.",
+    description: "Comprehensive analysis of the global photovoltaic market landscape, examining technology evolution, regional dynamics, policy frameworks, and strategic investment opportunities through 2030.",
     publishDate: "2024-06-15",
     readTime: "25 min",
     category: "market-analysis",
@@ -42,18 +42,18 @@ const reports: Report[] = [
     previewPages: 8,
     fileSize: "2.4 MB",
     author: {
-      name: "温馨 (Wenxin)",
+      name: "戴蓉蓉",
       title: "Senior Solar Market Analyst",
-      avatar: "/avatars/wenxin.svg"
+      avatar: "/avatars/dai-rongrong.svg"
     },
     tags: ["Solar Energy", "Market Analysis", "Investment", "Policy"],
     coverImage: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&h=600&fit=crop&auto=format",
-    excerpt: "The global solar PV market is projected to reach $334 billion by 2030, driven by declining costs, supportive policies, and increasing corporate renewable energy procurement.",
+    excerpt: "Global solar PV markets are projected to reach $334 billion by 2030, propelled by dramatically declining costs, strengthening policy support, and accelerating corporate renewable procurement strategies.",
     keyFindings: [
-      "Global solar capacity expected to triple by 2030",
-      "LCOE for utility-scale solar to drop below $0.02/kWh in key markets",
-      "Energy storage integration becoming critical for grid stability",
-      "China maintains manufacturing leadership but market diversifying"
+      "Global solar capacity poised for unprecedented tripling by 2030",
+      "Utility-scale solar LCOE approaching breakthrough $0.02/kWh threshold in leading markets",
+      "Energy storage integration emerges as critical enabler for grid stability and reliability",
+      "Chinese manufacturing dominance persists while supply chain diversification accelerates"
     ],
     tableOfContents: [
       { section: "Executive Summary", page: 3 },
@@ -64,7 +64,7 @@ const reports: Report[] = [
       { section: "Investment Outlook", page: 42 },
       { section: "Conclusions", page: 48 }
     ],
-    methodology: "Our analysis combines primary research from 150+ industry interviews, comprehensive market data from leading industry databases, and proprietary modeling of technology cost curves.",
+    methodology: "Analysis integrates primary research from 150+ executive interviews, comprehensive datasets from premier industry databases, and proprietary cost curve modeling to deliver actionable market intelligence.",
     dataSource: "IEA, IRENA, BloombergNEF, Wood Mackenzie, Primary Research",
     relatedReports: ["energy-storage-outlook-2024", "wind-energy-trends-2024"]
   },
@@ -72,7 +72,7 @@ const reports: Report[] = [
     id: "energy-storage-outlook-2024",
     title: "Energy Storage Market Outlook 2024",
     subtitle: "Battery Technologies, Grid Integration, and Market Dynamics",
-    description: "Comprehensive analysis of the rapidly evolving energy storage market, covering battery technologies, grid-scale deployments, and emerging market opportunities.",
+    description: "In-depth examination of the rapidly transforming energy storage ecosystem, analyzing cutting-edge battery technologies, large-scale grid deployments, and breakthrough market opportunities.",
     publishDate: "2024-05-20",
     readTime: "20 min",
     category: "technology-trends",
@@ -81,18 +81,18 @@ const reports: Report[] = [
     previewPages: 6,
     fileSize: "1.8 MB",
     author: {
-      name: "李明 (Li Ming)",
+      name: "林志华",
       title: "Energy Storage Technology Lead",
-      avatar: "/avatars/Li Ming.svg"
+      avatar: "/avatars/lin-zhihua.svg"
     },
     tags: ["Energy Storage", "Battery Technology", "Grid Integration", "Market Trends"],
     coverImage: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&h=600&fit=crop&auto=format",
-    excerpt: "The global energy storage market is experiencing unprecedented growth, with battery costs falling 90% since 2010 and grid-scale deployments accelerating worldwide.",
+    excerpt: "Global energy storage markets experience explosive growth as battery costs plummet 90% since 2010, while grid-scale deployments accelerate across continents.",
     keyFindings: [
-      "Battery storage capacity to grow 15x by 2030",
-      "Lithium-ion costs continue declining at 8% annually",
-      "Grid-scale storage becoming economically viable",
-      "Alternative technologies gaining market share"
+      "Battery storage capacity trajectory indicates 15-fold expansion by 2030",
+      "Lithium-ion technology maintains robust 8% annual cost decline momentum",
+      "Grid-scale storage crosses economic viability threshold in major markets",
+      "Next-generation storage technologies capture increasing market share"
     ],
     tableOfContents: [
       { section: "Executive Summary", page: 3 },
@@ -110,7 +110,7 @@ const reports: Report[] = [
     id: "wind-energy-trends-2024",
     title: "Wind Energy Technology Trends 2024",
     subtitle: "Offshore Expansion, Turbine Innovation, and Market Evolution",
-    description: "Analysis of wind energy technology developments, offshore market expansion, and grid integration challenges facing the wind industry.",
+    description: "Strategic analysis of wind energy technological breakthroughs, offshore market expansion dynamics, and critical grid integration challenges reshaping the industry.",
     publishDate: "2024-04-18",
     readTime: "18 min",
     category: "technology-trends",
@@ -119,13 +119,13 @@ const reports: Report[] = [
     previewPages: 5,
     fileSize: "1.5 MB",
     author: {
-      name: "张雨晴 (Zhang Yuqing)",
+      name: "王雅琪",
       title: "Wind Energy Research Director",
-      avatar: "/avatars/Zhang Yu.svg"
+      avatar: "/avatars/wang-yaqi.svg"
     },
     tags: ["Wind Energy", "Offshore Wind", "Turbine Technology", "Grid Integration"],
     coverImage: "https://images.unsplash.com/photo-1548337138-e87d889cc369?w=800&h=600&fit=crop&auto=format",
-    excerpt: "Wind energy continues to be the fastest-growing renewable technology, with offshore wind emerging as a game-changer for coastal markets worldwide.",
+    excerpt: "Wind energy maintains its position as the fastest-expanding renewable technology, while offshore wind emerges as a transformative force reshaping coastal energy markets globally.",
     keyFindings: [
       "Offshore wind capacity to reach 380 GW by 2030",
       "Turbine sizes continue growing, reaching 20+ MW",
@@ -147,7 +147,7 @@ const reports: Report[] = [
     id: "hydrogen-economy-report-2024",
     title: "The Hydrogen Economy: 2024 Market Report",
     subtitle: "Green Hydrogen Production, Infrastructure, and Applications",
-    description: "Comprehensive analysis of the emerging hydrogen economy, covering production technologies, infrastructure development, and industrial applications.",
+    description: "Strategic assessment of the nascent hydrogen economy, examining breakthrough production technologies, infrastructure development pathways, and transformative industrial applications.",
     publishDate: "2024-03-25",
     readTime: "22 min",
     category: "industry-outlook",
@@ -156,13 +156,13 @@ const reports: Report[] = [
     previewPages: 7,
     fileSize: "2.1 MB",
     author: {
-      name: "王浩然 (Wang Haoran)",
+      name: "张文博",
       title: "Hydrogen Technology Specialist",
-      avatar: "/avatars/王浩然.svg"
+      avatar: "/avatars/zhang-wenbo.svg"
     },
     tags: ["Hydrogen", "Green Hydrogen", "Industrial Applications", "Infrastructure"],
     coverImage: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=600&fit=crop&auto=format",
-    excerpt: "Green hydrogen is emerging as a critical component of global decarbonization efforts, with production costs declining and infrastructure investments accelerating.",
+    excerpt: "Green hydrogen establishes itself as an essential pillar of global decarbonization strategies, driven by declining production costs and surging infrastructure investments.",
     keyFindings: [
       "Green hydrogen costs to reach $1.50/kg by 2030",
       "Electrolyzer capacity growing 50% annually",
@@ -185,7 +185,7 @@ const reports: Report[] = [
     id: "clean-energy-policy-2024",
     title: "Clean Energy Policy Landscape 2024",
     subtitle: "Global Regulatory Trends and Investment Incentives",
-    description: "Analysis of evolving clean energy policies worldwide, covering regulatory frameworks, investment incentives, and their impact on market development.",
+    description: "Comprehensive examination of evolving global clean energy policy landscapes, analyzing regulatory frameworks, investment mechanisms, and market development impacts.",
     publishDate: "2024-02-14",
     readTime: "16 min",
     category: "policy-insights",
@@ -194,13 +194,13 @@ const reports: Report[] = [
     previewPages: 4,
     fileSize: "1.2 MB",
     author: {
-      name: "陈思雅 (Chen Siya)",
+      name: "李思怡",
       title: "Policy Research Manager",
-      avatar: "/avatars/Chen Siya.svg"
+      avatar: "/avatars/li-siyi.svg"
     },
     tags: ["Policy", "Regulation", "Investment Incentives", "Market Development"],
     coverImage: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop&auto=format",
-    excerpt: "Clean energy policies are becoming more sophisticated and targeted, with governments implementing technology-specific incentives and carbon pricing mechanisms.",
+    excerpt: "Clean energy policies evolve toward greater sophistication and precision, as governments deploy targeted technology incentives and comprehensive carbon pricing frameworks.",
     keyFindings: [
       "135 countries now have renewable energy targets",
       "Carbon pricing coverage expanding to 40% of global emissions",

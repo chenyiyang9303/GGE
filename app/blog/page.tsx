@@ -147,6 +147,27 @@ export default function BlogPage() {
         </div>
       </section>
 
+      {/* Featured Reports CTA */}
+      <section className="bg-gray-50 dark:bg-gray-800 py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold text-neutral-800 dark:text-neutral-100 mb-4">
+              Looking for Market Data?
+            </h2>
+            <p className="text-lg text-neutral-600 dark:text-neutral-300 mb-8">
+              Get comprehensive market intelligence and research reports to inform your strategic decisions.
+            </p>
+            <Link 
+              href="/reports"
+              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+            >
+              Explore Reports
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Newsletter Signup */}
       <section className="py-16 bg-gradient-to-r from-blue-600 to-green-600">
         <div className="container mx-auto px-4">

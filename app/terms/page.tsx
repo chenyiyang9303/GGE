@@ -24,7 +24,7 @@ export default function TermsOfService() {
               Agreement to Terms
             </h2>
             <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed">
-              These Terms of Service ("Terms") govern your use of Green Giant Energy Texas Inc's ("Omven", "we", "us", "our") website and consulting services. By accessing or using our services, you agree to be bound by these Terms. If you disagree with any part of these terms, then you may not access our services.
+              These Terms of Service ("Terms") govern your use of Green Giant Energy Texas Inc's ("GGE", "we", "us", "our") website and consulting services. By accessing or using our services, you agree to be bound by these Terms. If you disagree with any part of these terms, then you may not access our services.
             </p>
           </section>
 
@@ -33,7 +33,7 @@ export default function TermsOfService() {
               Services Description
             </h2>
             <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
-              Omven provides strategic consulting services for seed-stage startups, including but not limited to:
+              Green Giant Energy provides strategic clean energy consulting services for solar, wind, storage, and hydrogen companies, including but not limited to:
             </p>
             <ul className="list-disc pl-6 space-y-2 text-neutral-700 dark:text-neutral-300">
               <li>Business strategy and validation</li>
@@ -181,7 +181,7 @@ export default function TermsOfService() {
                 <p>Newtown, PA 18940</p>
                 <p className="mt-2">P: +1-267-759-9000</p>
                 <p>F: +1-267-759-8989</p>
-                <p>E: <a href="mailto:legal@omven.com" className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300">legal@omven.com</a></p>
+                <p>E: <a href="mailto:legal@greengiantenergy.com" className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300">legal@greengiantenergy.com</a></p>
               </div>
             </div>
           </section>

@@ -8,15 +8,15 @@ import { Users, Target, Award, Globe, Lightbulb, TrendingUp, Heart, CheckCircle,
 // Generate avatar URLs for team members using local avatar files
 const getAvatarUrl = (name: string, index: number) => {
   const avatarFiles = [
-    '/avatars/wenxin.svg',           // 温馨 (Wenxin)
-    '/avatars/Li Ming.svg',          // 李明 (Li Ming)
-    '/avatars/Zhang Yu.svg',         // 张雨晴 (Zhang Yuqing)  
-    '/avatars/王浩然.svg',            // 王浩然 (Wang Haoran)
-    '/avatars/Chen Siya.svg',        // 陈思雅 (Chen Siya)
-    '/avatars/Liu Jianguo.svg'       // 刘建国 (Liu Jianguo)
+    '/avatars/dai-rongrong.svg',     // 戴蓉蓉 (Dai Rongrong) - CEO
+    '/avatars/lin-zhihua.svg',       // 林志华 (Lin Zhihua) - Energy Storage Director
+    '/avatars/wang-yaqi.svg',        // 王雅琪 (Wang Yaqi) - Wind Energy Lead
+    '/avatars/zhang-wenbo.svg',      // 张文博 (Zhang Wenbo) - Hydrogen Director
+    '/avatars/li-siyi.svg',          // 李思怡 (Li Siyi) - Policy Manager
+    '/avatars/chen-jiayin.svg'       // 陈佳音 (Chen Jiayin) - Market Lead
   ];
   
-  return avatarFiles[index] || '/avatars/wenxin.svg';
+  return avatarFiles[index] || '/avatars/dai-rongrong.svg';
 };
 
 export default function AboutPage() {
@@ -198,50 +198,50 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                name: "温馨 (Wenxin)",
+                name: "戴蓉蓉 (Dai Rongrong)",
                 role: "Founder & CEO",
-                expertise: "Solar Technology & Market Strategy",
-                bio: "10+ years leading renewable energy projects and policy development",
+                expertise: "Clean Energy Strategy & Market Development",
+                bio: "15+ years leading renewable energy projects and sustainable business development initiatives",
                 image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop&auto=format",
                 linkedin: "#"
               },
               {
-                name: "李明 (Li Ming)",
+                name: "林志华 (Lin Zhihua)",
                 role: "Energy Storage Director",
                 expertise: "Battery Technology & Grid Integration",
-                bio: "Former energy systems engineer with deep storage expertise",
+                bio: "Former energy systems engineer at leading automotive company with deep battery storage expertise",
                 image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&auto=format",
                 linkedin: "#"
               },
               {
-                name: "张雨晴 (Zhang Yuqing)",
+                name: "王雅琪 (Wang Yaqi)",
                 role: "Wind Energy Lead",
                 expertise: "Offshore Wind & Technology Innovation",
-                bio: "Marine engineering background with 12+ years in offshore wind",
+                bio: "Marine engineering background with 12+ years experience in major offshore wind projects",
                 image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&auto=format",
                 linkedin: "#"
               },
               {
-                name: "王浩然 (Wang Haoran)",
-                role: "Hydrogen Specialist",
+                name: "张文博 (Zhang Wenbo)",
+                role: "Hydrogen Technology Director",
                 expertise: "Green Hydrogen & Industrial Applications",
-                bio: "Chemical engineering PhD focused on hydrogen production and applications",
+                bio: "Chemical engineering PhD from prestigious university, specializing in hydrogen production systems",
                 image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&auto=format",
                 linkedin: "#"
               },
               {
-                name: "陈思雅 (Chen Siya)",
+                name: "李思怡 (Li Siyi)",
                 role: "Policy Research Manager",
                 expertise: "Energy Policy & Regulatory Analysis",
-                bio: "Former energy policy analyst with expertise in clean energy regulations",
+                bio: "Former policy analyst at national energy development agency with expertise in clean energy regulations",
                 image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop&auto=format",
                 linkedin: "#"
               },
               {
-                name: "刘建国 (Liu Jianguo)",
-                role: "Market Research Lead",
+                name: "陈佳音 (Chen Jiayin)",
+                role: "Market Intelligence Lead",
                 expertise: "Market Analysis & Investment Strategy",
-                bio: "Financial modeling expert with focus on clean energy investments",
+                bio: "Former consultant at top-tier consulting firm specializing in clean energy market analysis and strategy",
                 image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&h=300&fit=crop&auto=format",
                 linkedin: "#"
               }
