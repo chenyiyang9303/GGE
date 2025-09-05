@@ -16,7 +16,7 @@ export function Testimonials() {
             Trusted by Industry Leaders
           </h2>
           <p className="text-lg text-accent-600 dark:text-accent-300 max-w-3xl mx-auto">
-            200+ companies trust us to deliver transformational results. Here's what industry leaders say about working with our team to unlock exponential growth.
+            20+ companies trust us to deliver transformational results. Here's what industry leaders say about working with our team to unlock exponential growth.
           </p>
         </div>
 
@@ -155,21 +155,21 @@ export const testimonials: Testimonial[] = [
   {
     name: "Sarah Zhang",
     quote:
-      "Their strategic consulting transformed our business completely. We went from $48M to $131M in annual revenue within 18 months and expanded to 25 countries.",
+      "Their strategic consulting transformed our business completely. We went from $4.8M to $13.1M in annual revenue within 18 months and expanded to 5 countries.",
     src: "https://i.pravatar.cc/150?img=1",
     designation: "CEO, SolarTech Energy",
   },
   {
     name: "David Wang", 
     quote:
-      "Their digital transformation strategy delivered incredible results - 23% efficiency gains, 35% cost reduction, and $50M in additional annual revenue.",
+      "Their digital transformation strategy delivered incredible results - 23% efficiency gains, 35% cost reduction, and $5M in additional annual revenue.",
     src: "https://i.pravatar.cc/150?img=2",
     designation: "CTO, WindPower Energy",
   },
   {
     name: "Dr. Emily Chen",
     quote:
-      "The technology roadmap they created was game-changing. We scaled from consumer products to grid-scale solutions, growing revenue from $210M to $680M.",
+      "The technology roadmap they created was game-changing. We scaled from consumer products to grid-scale solutions, growing revenue from $2.1M to $6.8M.",
     src: "https://i.pravatar.cc/150?img=3",
     designation: "Founder & CTO, EnergyStore Tech",
   },
@@ -183,7 +183,7 @@ export const testimonials: Testimonial[] = [
   {
     name: "Maria Rodriguez",
     quote:
-      "Outstanding market intelligence helped us identify a $2B opportunity in offshore wind. We're now the #3 player in floating platforms.",
+      "Outstanding market intelligence helped us identify a major opportunity in offshore wind. We're now a strong player in floating platforms.",
     src: "https://i.pravatar.cc/150?img=5",
     designation: "Chief Strategy Officer, OceanWind Corp",
   },
@@ -197,14 +197,14 @@ export const testimonials: Testimonial[] = [
   {
     name: "Lisa Park",
     quote:
-      "They helped us secure $150M in Series B funding with a compelling investment thesis. Their financial modeling was instrumental.",
+      "They helped us secure $1.5M in Series B funding with a compelling investment thesis. Their financial modeling was instrumental.",
     src: "https://i.pravatar.cc/150?img=7",
     designation: "CFO, BatteryTech Innovations",
   },
   {
     name: "Michael Singh",
     quote:
-      "Market entry strategy for Asia-Pacific was flawless. We achieved $80M revenue in year one across 8 countries.",
+      "Market entry strategy for Asia-Pacific was flawless. We achieved $800k revenue in year one across 3 countries.",
     src: "https://i.pravatar.cc/150?img=8",
     designation: "Regional Director, SolarMax International",
   },
@@ -225,7 +225,7 @@ export const testimonials: Testimonial[] = [
   {
     name: "Dr. Rachel Adams",
     quote:
-      "Strategic partnerships they facilitated opened doors to $500M in new business opportunities. Truly transformational.",
+      "Strategic partnerships they facilitated opened doors to $5M in new business opportunities. Truly transformational.",
     src: "https://i.pravatar.cc/150?img=11",
     designation: "Business Development Director, FusionEnergy Corp",
   },

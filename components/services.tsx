@@ -33,8 +33,8 @@ export function Services() {
         <ServiceCard
           icon={<BarChart3 className="h-6 w-6" />}
           title="Market Intelligence & Go-to-Market Strategy"
-          description="Turn market insights into winning strategies. We identify $100M+ opportunities and create actionable roadmaps for market dominance."
-          features={["Multi-billion dollar market mapping", "Competitive intelligence & white space analysis", "High-impact opportunity prioritization", "Revenue-optimized business model design"]}
+          description="Turn market insights into winning strategies. We identify opportunities and create actionable roadmaps for market dominance."
+          features={["Market opportunity mapping", "Competitive intelligence & white space analysis", "High-impact opportunity prioritization", "Revenue-optimized business model design"]}
         />
         
         <ServiceCard
@@ -47,7 +47,7 @@ export function Services() {
         <ServiceCard
           icon={<Globe className="h-6 w-6" />}
           title="Global Market Expansion"
-          description="Scale internationally with confidence. We've helped companies establish presence in 50+ countries and unlock $2B+ in international revenue."
+          description="Scale internationally with confidence. We've helped companies establish presence in 5+ countries and unlock $2M+ in international revenue."
           features={["High-growth market entry strategies", "Multi-channel distribution networks", "Strategic partnership development", "Regulatory compliance & risk management"]}
         />
         
@@ -61,7 +61,7 @@ export function Services() {
         <ServiceCard
           icon={<Target className="h-6 w-6" />}
           title="Capital Strategy & Investment Advisory"
-          description="Secure funding and maximize ROI. Our clients have raised $5B+ in capital with 85% higher success rates than industry average."
+          description="Secure funding and maximize ROI. Our clients have raised $5M+ in capital with 85% higher success rates than industry average."
           features={["Investment-ready business case development", "Advanced financial modeling & valuation", "Strategic investor matching & introductions", "Due diligence preparation & support"]}
         />
         

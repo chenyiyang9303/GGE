@@ -124,7 +124,7 @@ export default function PrivacyPolicy() {
               Marketing
             </h2>
             <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed">
-              As explained above, Green Giant Energy will collect and use your personal data for marketing purposes. Your data will be stored in our CRM system. We will use your data to inform you about GGE products and services we think may be of interest to you and send you our newsletters. For statistical purposes, we will collect information about your response to our emails and our interaction with you to make decisions on future marketing. If you wish to stop our collection and use of this information, please contact privacy@greengiantenergy.com.
+              As explained above, Green Giant Energy will collect and use your personal data for marketing purposes. Your data will be stored in our CRM system. We will use your data to inform you about GGE products and services we think may be of interest to you and send you our newsletters. For statistical purposes, we will collect information about your response to our emails and our interaction with you to make decisions on future marketing. If you wish to stop our collection and use of this information, please contact privacy@ggeconsulting.net.
             </p>
           </section>
 
@@ -192,7 +192,7 @@ export default function PrivacyPolicy() {
                 <p>Newtown, PA 18940</p>
                 <p className="mt-2">P: +1-267-759-9000</p>
                 <p>F: +1-267-759-8989</p>
-                <p>E: <a href="mailto:privacy@greengiantenergy.com" className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300">privacy@greengiantenergy.com</a></p>
+                <p>E: <a href="mailto:privacy@ggeconsulting.net" className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300">privacy@ggeconsulting.net</a></p>
               </div>
             </div>
           </section>

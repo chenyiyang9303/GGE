@@ -19,11 +19,11 @@ export function CTAWithDashedGridLines() {
         <h2 className="text-left text-accent-600 dark:text-accent-300 text-2xl md:text-4xl font-display font-medium leading-tight">
           Ready to unlock your{" "}
           <span className="font-bold text-accent-900 dark:text-white">
-            $10B market opportunity?
+market opportunity?
           </span>
         </h2>
         <p className="text-left text-accent-600 dark:text-accent-300 mt-6 max-w-lg text-lg md:text-xl font-medium leading-relaxed">
-          Join 200+ clean energy leaders who've achieved{" "}
+          Join 20+ clean energy leaders who've achieved{" "}
           <span className="text-primary-600 dark:text-primary-400 font-semibold">3x faster growth</span> with our{" "}
           <span className="text-primary-600 dark:text-primary-400 font-semibold">proven strategies</span>.
         </p>
@@ -42,7 +42,7 @@ export function CTAWithDashedGridLines() {
             onClick={() => window.location.href = '/#case-studies'}
             className="group flex items-center justify-center px-8 py-4 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 text-gray-900 dark:text-white font-semibold rounded-xl transition-all duration-200 hover:shadow-md hover:-translate-y-0.5 min-w-[220px]"
           >
-            <span>See $5B in Results</span>
+            <span>See Our Results</span>
             <IconMessageCircleQuestion className="ml-2 group-hover:translate-x-1 h-4 w-4 transition-transform duration-200" />
           </button>
         </div>
@@ -54,7 +54,7 @@ export function CTAWithDashedGridLines() {
           </svg>
         </div>
         <p className="text-lg text-accent-700 dark:text-accent-200 leading-relaxed font-medium">
-          &quot;Their strategic consulting transformed our business completely. We went from $48M to $131M in revenue within 18 months, expanded to 25 countries, and became a market leader in distributed solar.&quot;
+          &quot;Their strategic consulting transformed our business completely. We went from $4.8M to $13.1M in revenue within 18 months, expanded to 5 countries, and became a market leader in distributed solar.&quot;
         </p>
         <div className="flex flex-col text-sm items-start mt-6 gap-1">
           <p className="font-bold text-accent-900 dark:text-white">

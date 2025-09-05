@@ -41,8 +41,8 @@ export const caseStudies: CaseStudy[] = [
     solution: "We provided global distributed solar market analysis, developed targeted market entry strategies, and assisted in establishing overseas sales networks.",
     results: [
       { metric: "International Market Share", value: "0% → 15%" },
-      { metric: "Annual Revenue Growth", value: "$48M → $131M" },
-      { metric: "Export Countries", value: "Expanded to 25 countries" }
+      { metric: "Annual Revenue Growth", value: "$4.8M → $13.1M" },
+      { metric: "Export Countries", value: "Expanded to 5 countries" }
     ],
     timeline: "18 months",
     image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
@@ -104,7 +104,7 @@ export const caseStudies: CaseStudy[] = [
         category: "Financial Performance",
         description: "Achieved significant revenue growth and profitability improvement",
         metrics: [
-          { metric: "Annual Revenue", before: "$48M", after: "$131M", improvement: "172%" },
+          { metric: "Annual Revenue", before: "$4.8M", after: "$13.1M", improvement: "172%" },
           { metric: "Gross Margin", before: "18%", after: "28%", improvement: "56%" },
           { metric: "Average Overseas Order Price", before: "$0.27/W", after: "$0.36/W", improvement: "33%" }
         ]
@@ -214,7 +214,7 @@ export const caseStudies: CaseStudy[] = [
     results: [
       { metric: "Market Share Growth", value: "8% → 25%" },
       { metric: "Product Line Expansion", value: "2 → 6 product lines" },
-      { metric: "Annual Revenue Growth", value: "$32M → $102M" }
+      { metric: "Annual Revenue Growth", value: "$3.2M → $10.2M" }
     ],
     timeline: "15 months",
     image: "/EnergyStore Tech.jpg",
@@ -276,7 +276,7 @@ export const caseStudies: CaseStudy[] = [
         category: "Market Performance",
         description: "Successfully entered grid-scale storage market with breakthrough business growth",
         metrics: [
-          { metric: "Annual Order Value", before: "$32M", after: "$102M", improvement: "224%" },
+          { metric: "Annual Order Value", before: "$3.2M", after: "$10.2M", improvement: "224%" },
           { metric: "Large Project Count", before: "2", after: "18", improvement: "800%" },
           { metric: "Utility Customers", before: "1", after: "12", improvement: "1100%" }
         ]
@@ -300,7 +300,7 @@ export const caseStudies: CaseStudy[] = [
     results: [
       { metric: "Market Share", value: "0% → 12%" },
       { metric: "Product Line Expansion", value: "Added 3 heavy-duty truck products" },
-      { metric: "Annual Revenue Growth", value: "$23M → $63M" }
+      { metric: "Annual Revenue Growth", value: "$2.3M → $6.3M" }
     ],
     timeline: "24 months",
     image: "/Hydrogen Energy.jpg",
@@ -373,7 +373,7 @@ export const caseStudies: CaseStudy[] = [
         category: "Commercial Achievements",
         description: "Successfully entered hydrogen heavy-duty truck market and established industry leadership position",
         metrics: [
-          { metric: "Annual Sales Revenue", before: "$23M", after: "$63M", improvement: "180%" },
+          { metric: "Annual Sales Revenue", before: "$2.3M", after: "$6.3M", improvement: "180%" },
           { metric: "Heavy-duty Truck Customers", before: "0", after: "25", improvement: "New Market Entry" },
           { metric: "Market Share", before: "0%", after: "12%", improvement: "Top 3 Industry Position" }
         ]

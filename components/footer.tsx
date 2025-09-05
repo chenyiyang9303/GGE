@@ -72,7 +72,7 @@ export function Footer() {
   const contact = [
     {
       title: "Email Us",
-      href: "mailto:hello@greengiantenergy.com",
+      href: "mailto:hello@ggeconsulting.net",
     },
     {
       title: "Schedule Consultation",
@@ -99,10 +99,10 @@ export function Footer() {
               {/* Updated tagline */}
               <div className="space-y-3">
                 <h3 className="text-lg font-bold bg-gradient-to-r from-blue-600 via-green-600 to-blue-800 dark:from-blue-400 dark:via-green-400 dark:to-blue-300 bg-clip-text text-transparent">
-                  Transform Clean Energy Ideas into $10B Market Opportunities
+                  Transform Clean Energy Ideas into Market Opportunities
                 </h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-md">
-                  Turning breakthrough insights into billion-dollar market realities. We bridge the gap between innovative clean energy concepts and scalable business success.
+                  Turning breakthrough insights into market realities. We bridge the gap between innovative clean energy concepts and scalable business success.
                 </p>
               </div>
 

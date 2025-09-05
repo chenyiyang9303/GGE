@@ -20,10 +20,10 @@ export function Process() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-display text-display-md md:text-display-lg font-bold text-accent-900 dark:text-white mb-4">
-            Proven Path to $10B Market Success
+            Proven Path to Market Success
           </h2>
           <p className="text-lg text-accent-600 dark:text-accent-300 max-w-3xl mx-auto">
-            Our battle-tested 4-phase methodology has generated $5B+ in client value and delivered 3x faster time-to-market across 200+ clean energy projects.
+            Our battle-tested 4-phase methodology has generated $5M+ in client value and delivered 3x faster time-to-market across 20+ clean energy projects.
           </p>
         </div>
 
@@ -33,9 +33,9 @@ export function Process() {
               step={1}
               icon={<Search className="h-8 w-8" />}
               title="Discovery & Market Intelligence"
-              description="Uncover hidden $100M+ opportunities through deep market analysis and competitive intelligence that reveals your path to market leadership."
+              description="Uncover hidden opportunities through deep market analysis and competitive intelligence that reveals your path to market leadership."
               details={[
-                "$10B+ market opportunity mapping",
+                "Market opportunity mapping",
                 "Competitive white space identification",
                 "Regulatory landscape & policy impact analysis",
                 "Technology readiness & IP gap assessment"
@@ -95,7 +95,7 @@ export function Process() {
             className="inline-flex items-center gap-3 bg-primary-50 dark:bg-primary-900/20 px-8 py-4 rounded-full border border-primary-200 dark:border-primary-800"
           >
             <span className="text-primary-600 dark:text-primary-400 font-semibold text-lg">
-              Ready to unlock your $10B market opportunity?
+              Ready to unlock your market opportunity?
             </span>
             <ArrowRight className="h-5 w-5 text-primary-600 dark:text-primary-400" />
           </motion.div>

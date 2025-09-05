@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Users, Target, Award, Globe, Lightbulb, TrendingUp, Heart, CheckCircle, ArrowRight, Mail, Linkedin } from "lucide-react";
+import { Users, Target, Award, Globe, Lightbulb, TrendingUp, Heart, CheckCircle, ArrowRight, Mail } from "lucide-react";
 
 // Generate avatar URLs for team members using local avatar files
 const getAvatarUrl = (name: string, index: number) => {
@@ -203,7 +203,7 @@ export default function AboutPage() {
                 expertise: "Clean Energy Strategy & Market Development",
                 bio: "15+ years leading renewable energy projects and sustainable business development initiatives",
                 image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop&auto=format",
-                linkedin: "#"
+                email: "rongrong.dai@ggeconsulting.net"
               },
               {
                 name: "林志华 (Lin Zhihua)",
@@ -211,7 +211,7 @@ export default function AboutPage() {
                 expertise: "Battery Technology & Grid Integration",
                 bio: "Former energy systems engineer at leading automotive company with deep battery storage expertise",
                 image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&auto=format",
-                linkedin: "#"
+                email: "zhihua.lin@ggeconsulting.net"
               },
               {
                 name: "王雅琪 (Wang Yaqi)",
@@ -219,7 +219,7 @@ export default function AboutPage() {
                 expertise: "Offshore Wind & Technology Innovation",
                 bio: "Marine engineering background with 12+ years experience in major offshore wind projects",
                 image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&auto=format",
-                linkedin: "#"
+                email: "yaqi.wang@ggeconsulting.net"
               },
               {
                 name: "张文博 (Zhang Wenbo)",
@@ -227,7 +227,7 @@ export default function AboutPage() {
                 expertise: "Green Hydrogen & Industrial Applications",
                 bio: "Chemical engineering PhD from prestigious university, specializing in hydrogen production systems",
                 image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&auto=format",
-                linkedin: "#"
+                email: "wenbo.zhang@ggeconsulting.net"
               },
               {
                 name: "李思怡 (Li Siyi)",
@@ -235,7 +235,7 @@ export default function AboutPage() {
                 expertise: "Energy Policy & Regulatory Analysis",
                 bio: "Former policy analyst at national energy development agency with expertise in clean energy regulations",
                 image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop&auto=format",
-                linkedin: "#"
+                email: "siyi.li@ggeconsulting.net"
               },
               {
                 name: "陈佳音 (Chen Jiayin)",
@@ -243,7 +243,7 @@ export default function AboutPage() {
                 expertise: "Market Analysis & Investment Strategy",
                 bio: "Former consultant at top-tier consulting firm specializing in clean energy market analysis and strategy",
                 image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&h=300&fit=crop&auto=format",
-                linkedin: "#"
+                email: "jiayin.chen@ggeconsulting.net"
               }
             ].map((member, index) => (
               <motion.div
@@ -278,16 +278,10 @@ export default function AboutPage() {
                   </p>
                   <div className="flex items-center gap-3">
                     <a
-                      href={`mailto:${member.name.toLowerCase().replace(' ', '.')}@cleanenergyconsulting.com`}
+                      href={`mailto:${member.email}`}
                       className="inline-flex items-center gap-1 text-neutral-600 dark:text-neutral-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                     >
                       <Mail className="h-4 w-4" />
-                    </a>
-                    <a
-                      href={member.linkedin}
-                      className="inline-flex items-center gap-1 text-neutral-600 dark:text-neutral-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                    >
-                      <Linkedin className="h-4 w-4" />
                     </a>
                   </div>
                 </div>
@@ -313,7 +307,7 @@ export default function AboutPage() {
             {[
               { number: "500+", label: "Projects Completed", icon: CheckCircle },
               { number: "50GW", label: "Renewable Capacity Analyzed", icon: TrendingUp },
-              { number: "$25B", label: "Investment Decisions Supported", icon: Award },
+              { number: "$5M", label: "Investment Decisions Supported", icon: Award },
               { number: "30+", label: "Countries Served", icon: Globe }
             ].map((stat, index) => (
               <motion.div

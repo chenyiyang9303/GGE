@@ -51,7 +51,7 @@ export function CaseStudies() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-display text-display-md md:text-display-lg font-bold text-accent-900 dark:text-white mb-4">
-            $5B+ in Client Value Created
+            $5M+ in Client Value Created
           </h2>
           <p className="text-lg text-accent-600 dark:text-accent-300 max-w-3xl mx-auto">
             Real results from real companies. See how our strategic consulting has delivered transformational growth, market leadership, and breakthrough innovations for clean energy leaders worldwide.

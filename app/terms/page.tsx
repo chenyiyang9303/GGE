@@ -181,7 +181,7 @@ export default function TermsOfService() {
                 <p>Newtown, PA 18940</p>
                 <p className="mt-2">P: +1-267-759-9000</p>
                 <p>F: +1-267-759-8989</p>
-                <p>E: <a href="mailto:legal@greengiantenergy.com" className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300">legal@greengiantenergy.com</a></p>
+                <p>E: <a href="mailto:legal@ggeconsulting.net" className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300">legal@ggeconsulting.net</a></p>
               </div>
             </div>
           </section>
